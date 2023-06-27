@@ -26,7 +26,6 @@ public class UserController {
     //查看用户列表
     @PostMapping("/list")
     public Result<List<SysUser>> pagelist(@RequestBody RequestObject request){
-        System.out.println("我接收到的东西"+request);
         return sysUserService.pageList(request.getQuerySearch(),request.getValue(), request.getPage(), request.getLimit());
     }
 

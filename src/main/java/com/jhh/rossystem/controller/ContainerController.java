@@ -40,16 +40,16 @@ public class ContainerController {
     @PostMapping("/add")
     public  Result add(@RequestBody ContainerAddObject containerAddObject)
     {
-        SysUser user = (SysUser) session.getAttribute("user");
-        if (user.getRole().equals(2)) {
-            containerAddObject.setUserid(user.getId());
-        }
+//        SysUser user = (SysUser) session.getAttribute("user");
+//        if (user.getRole()==2) {
+//            containerAddObject.setUserid(user.getId());
+//        }
         return sysContainerService.add(containerAddObject);
     }
 
     @PostMapping("/start")
-    public Result start(@RequestBody Map<String,Object> requestData){
-        return sysContainerService.start((int)requestData.get("id"));
+    public Result start(@RequestBody RequestObject requestObject){
+        return sysContainerService.start(requestObject.getId());
     }
 
 
@@ -59,14 +59,16 @@ public class ContainerController {
     }
 
     @PostMapping("/upload")
-    public Result upload(@RequestBody Map<String,Object> requestData){
-        return null;
+    public Result upload(@RequestBody RequestObject requestObject){
+        return sysContainerService.uploadFile(requestObject.getFile(),requestObject.getId());
     }
 
     @PostMapping("/download")
     public Result download(@RequestBody Map<String,Object> requestData){
-        return null;
+        return sysContainerService.downloadFile((String) requestData.get("path"),(Integer) requestData.get("id"));
     }
+
+
 
 
 }

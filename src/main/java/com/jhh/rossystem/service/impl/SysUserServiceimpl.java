@@ -93,10 +93,10 @@ public class SysUserServiceimpl implements SysUserService {
         // 查询条件
         if ("username".equals(querySearch)) {
             queryWrapper.like("username", value);
-        } else if ("nickName".equals(querySearch)) {
-            queryWrapper.like("nickName", value);
-        } else if ("groupid".equals(querySearch)) {
-            queryWrapper.eq("groupid", value);
+        } else if ("nick_name".equals(querySearch)) {
+            queryWrapper.like("nick_name", value);
+        } else if ("role".equals(querySearch)) {
+            queryWrapper.eq("role", value);
         }
         queryWrapper.orderByAsc("id");
         iPage = sysUserMapper.selectPage(iPage, queryWrapper);
@@ -127,7 +127,13 @@ public class SysUserServiceimpl implements SysUserService {
 
     @Override
     public Result edit(SysUser sysUser) {
-        return null;
+        String password = Base64Util.encrypt(sysUser.getPassword());
+        sysUser.setPassword(password);
+        int i = sysUserMapper.updateById(sysUser);
+        if (i == 0) {
+            return Result.fail("修改失败！");
+        }
+        return Result.ok();
     }
 
     @Override

@@ -2,14 +2,15 @@ package com.jhh.rossystem.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.jhh.rossystem.controller.bao.ContainerAddObject;
 import com.jhh.rossystem.entity.ContainerPort;
-import com.jhh.rossystem.entity.ContainerVersion;
+import com.jhh.rossystem.entity.Image;
 import com.jhh.rossystem.entity.SysContainer;
 import com.jhh.rossystem.entity.SysUser;
 import com.jhh.rossystem.mapper.ContainerPortMapper;
-import com.jhh.rossystem.mapper.ContainerVersionMapper;
+import com.jhh.rossystem.mapper.ImageMapper;
 import com.jhh.rossystem.mapper.SysContainerMapper;
 import com.jhh.rossystem.mapper.SysUserMapper;
 import com.jhh.rossystem.service.DockerService;
@@ -46,7 +47,7 @@ public class SysContainerServiceimpl implements SysContainerService {
     private DockerService dockerService;
 
     @Resource
-    private ContainerVersionMapper containerVersionMapper;
+    private ImageMapper imageMapper;
     @Override
     public Result add(ContainerAddObject containerAddObject) {
         QueryWrapper<SysContainer> queryWrapper = new QueryWrapper<>();
@@ -59,7 +60,7 @@ public class SysContainerServiceimpl implements SysContainerService {
 
         QueryWrapper<ContainerPort> queryWrapper1 = new QueryWrapper<>();
         queryWrapper1.eq("port",containerAddObject.getParams().getArr()[0]);
-
+//
 //        queryWrapper = new QueryWrapper<>();
 //        queryWrapper.eq("port", sysContainer.getPort());
         count = Math.toIntExact(containerPortMapper.selectCount(queryWrapper1));
@@ -97,27 +98,29 @@ public class SysContainerServiceimpl implements SysContainerService {
     public Result<List<SysContainer>> pageList(String querySearch, String value, Integer page, Integer limit) {
         IPage<SysContainer> iPage = new Page<>(page, limit);
         QueryWrapper<SysContainer> queryWrapper = new QueryWrapper<>();
-        queryWrapper.eq(null != querySearch, "user_id", querySearch);
+        //queryWrapper.eq(null != querySearch, "user_id", querySearch);
         // 查询条件
         if ("name".equals(querySearch)) {
             queryWrapper.like("name", value);
         } else if ("status".equals(querySearch)) {
             queryWrapper.eq("status", value);
-        } else if ("version".equals(querySearch)) {
-            queryWrapper.eq("version", value);
-        } else if ("port".equals(querySearch)) {
-            queryWrapper.eq("port", value);
+        } else if ("version_id".equals(querySearch)) {
+            queryWrapper.eq("version_id", value);
+        } else if("user_id".equals(querySearch)){
+            queryWrapper.eq("user_id",value);
         }
         queryWrapper.orderByAsc("id");
-        iPage = sysContainerMapper.selectPage(iPage, queryWrapper);
+        iPage = sysContainerMapper.selectPage(iPage,queryWrapper);
         List<SysContainer> list = iPage.getRecords();
         if (list.isEmpty()) {
+            System.out.println("fail");
             return Result.page(Math.toIntExact(iPage.getTotal()), list);
+
         }
         List<Integer> userIds = list.stream().map(SysContainer::getUserId).collect(Collectors.toList());
         List<Integer> versionIds = list.stream().map(SysContainer::getVersionId).collect(Collectors.toList());
         List<SysUser> userList = sysUserMapper.selectBatchIds(userIds);
-        List<ContainerVersion> versionList = containerVersionMapper.selectBatchIds(versionIds);
+        List<Image> versionList = imageMapper.selectBatchIds(versionIds);
         for (SysContainer container : list) {
             for (SysUser user : userList) {
                 if (user.getId().equals(container.getUserId())) {
@@ -126,7 +129,7 @@ public class SysContainerServiceimpl implements SysContainerService {
                     break;
                 }
             }
-            for (ContainerVersion version : versionList) {
+            for (Image version : versionList) {
                 if (version.getId().equals(container.getVersionId())) {
                     container.setVersion(version.getVersion());
                     break;
@@ -152,7 +155,7 @@ public class SysContainerServiceimpl implements SysContainerService {
         if (null == container) {
             return Result.fail("容器不存在！");
         }
-        channelUtil.startDocker(container.getContainerId());
+        //channelUtil.startDocker(container.getContainerId());
         sysContainerMapper.updateStatus(1, id);
         return Result.ok();
     }
@@ -164,14 +167,38 @@ public class SysContainerServiceimpl implements SysContainerService {
         if (null == container) {
             return Result.fail("容器不存在！");
         }
-        channelUtil.stopDocker(container.getContainerId());
+//        channelUtil.stopDocker(container.getContainerId());
         sysContainerMapper.updateStatus(2, id);
         return Result.ok();
     }
 
     @Override
     public Result uploadFile(MultipartFile file, Integer id) {
-        return null;
+        SysContainer container = sysContainerMapper.selectById(id);
+        if (null == container) {
+            return Result.fail("容器数据异常！");
+        }
+        String containerId = container.getContainerId();
+        if (StringUtils.isBlank(containerId)) {
+            return Result.fail("容器数据异常！");
+        }
+        String filename = file.getOriginalFilename();
+//        channelUtil.uploadFile(file);
+//        channelUtil.dockerCp(containerId, filename);
+        return Result.ok();
+    }
+
+    public Result downloadFile(String path,Integer id) {
+        SysContainer container = sysContainerMapper.selectById(id);
+        if (null == container) {
+            return Result.fail("容器数据异常！");
+        }
+        String containerId = container.getContainerId();
+        if (StringUtils.isBlank(containerId)) {
+            return Result.fail("容器数据异常！");
+        }
+        //utils相关download方法
+        return Result.ok();
     }
 
     @Override
