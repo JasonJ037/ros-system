@@ -45,14 +45,33 @@ public class ImageServiceimpl implements ImageService {
     }
 
     @Override
-    public Result<List<Image>> pageList(String version, Integer page, Integer limit) {
+    public Result<List<Image>> pageList(String querySearch,String value, Integer page, Integer limit) {
         IPage<Image> iPage = new Page<>(page, limit);
         QueryWrapper<Image> queryWrapper = new QueryWrapper<>();
-        queryWrapper.like(StringUtils.isNotBlank(version), "version", version);
-        queryWrapper.orderByDesc("id");
-        iPage = imageMapper.selectPage(iPage, queryWrapper);
-        List<Image> list = iPage.getRecords();
-        return Result.page(Math.toIntExact(iPage.getTotal()), list);
+
+        if("id".equals(querySearch)){
+            queryWrapper.eq("id",value);
+        }else if("version".equals(querySearch)){
+            queryWrapper.like("version",value);
+        }else if("content".equals(querySearch)){
+            queryWrapper.like("content",value);
+        }
+
+        queryWrapper.orderByAsc("id");
+        iPage=imageMapper.selectPage(iPage,queryWrapper);
+        List<Image>list=iPage.getRecords();
+
+        if (list.isEmpty()) {
+            return Result.page(Math.toIntExact(iPage.getTotal()), list);
+        }
+
+        return Result.page(list);
+
+//        queryWrapper.like(StringUtils.isNotBlank(version), "version", version);
+//        queryWrapper.orderByDesc("id");
+//        iPage = imageMapper.selectPage(iPage, queryWrapper);
+//        List<Image> list = iPage.getRecords();
+//        return Result.page(Math.toIntExact(iPage.getTotal()), list);
     }
 
     @Override

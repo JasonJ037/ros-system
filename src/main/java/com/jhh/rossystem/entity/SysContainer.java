@@ -16,6 +16,7 @@ public class SysContainer implements Serializable {
     private Integer id;
 
     @NotBlank(message = "请输入名字")
+    @TableField("name")
     private String name;
 
     @TableField("user_id")

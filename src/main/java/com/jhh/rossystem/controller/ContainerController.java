@@ -6,10 +6,7 @@ import com.jhh.rossystem.entity.SysContainer;
 import com.jhh.rossystem.entity.SysUser;
 import com.jhh.rossystem.service.SysContainerService;
 import com.jhh.rossystem.utils.Result;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
@@ -18,6 +15,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/api/container")
 public class ContainerController {
 

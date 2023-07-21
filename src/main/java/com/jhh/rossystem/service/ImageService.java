@@ -10,7 +10,7 @@ public interface ImageService {
 
     Result edit(Image image);
 
-    Result<List<Image>> pageList(String version, Integer page, Integer limit);
+    Result<List<Image>> pageList(String querySearch,String value, Integer page, Integer limit);
 
     Result delete(Integer id);
 

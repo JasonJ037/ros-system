@@ -8,10 +8,11 @@ import java.io.Serializable;
 
 @Data
 public class ContainerPort implements Serializable {
-    private Integer id;
 
     @TableId(type= IdType.AUTO)
+    private Integer id;
+
     private Integer port;
 
-
+    private String containerId;
 }

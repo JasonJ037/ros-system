@@ -11,6 +11,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
+@CrossOrigin
 @RequestMapping("api/image")
 public class ImageController {
 
@@ -20,7 +21,7 @@ public class ImageController {
 
     @PostMapping(value = "/list")
     public Result<List<Image>> pageList(@RequestBody RequestObject requestObject) {
-        return imageService.pageList(requestObject.getValue(), requestObject.getPage(), requestObject.getLimit());
+        return imageService.pageList(requestObject.getQuerySearch(),requestObject.getValue(), requestObject.getPage(), requestObject.getLimit());
     }
 
     @PostMapping(value = "/info")

@@ -98,7 +98,7 @@ public class Result<T> {
         Result<T> result = new Result<>();
         result.setCode(0);
         result.setMsg("");
-//        result.setSuccess(true);
+        result.setSuccess(true);
         result.setData(data);
 //        result.setCount(count);
         return result;
