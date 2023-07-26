@@ -113,7 +113,7 @@ public class SysUserServiceimpl implements SysUserService {
                 }
             }
         }
-        return Result.page(list);
+        return Result.page(list.size(),list);
     }
 
     @Override

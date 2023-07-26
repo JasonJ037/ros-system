@@ -65,7 +65,7 @@ public class ImageServiceimpl implements ImageService {
             return Result.page(Math.toIntExact(iPage.getTotal()), list);
         }
 
-        return Result.page(list);
+        return Result.page(list.size(),list);
 
 //        queryWrapper.like(StringUtils.isNotBlank(version), "version", version);
 //        queryWrapper.orderByDesc("id");
