@@ -1,6 +1,7 @@
 package com.jhh.rossystem.controller;
 
 import com.jhh.rossystem.controller.bao.RequestObject;
+import com.jhh.rossystem.controller.bao.UserUpdateRequest;
 import com.jhh.rossystem.entity.SysUser;
 import com.jhh.rossystem.service.SysUserService;
 import com.jhh.rossystem.utils.Result;
@@ -47,8 +48,8 @@ public class UserController {
 
     //编辑用户
     @PostMapping("/edit")
-    public Result edit(@Valid @RequestBody SysUser user){
-        return sysUserService.edit(user);
+    public Result edit(@Valid @RequestBody UserUpdateRequest userUpdateRequest){
+        return sysUserService.edit(userUpdateRequest);
     }
 
     @PostMapping("/login")

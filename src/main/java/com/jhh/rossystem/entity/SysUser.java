@@ -19,8 +19,8 @@ public class SysUser implements Serializable {
     @NotBlank(message = "密码不能为空")
     private String password;
 
-    @TableField(exist = false)
-    private String passwordCf;
+//    @TableField(exist = false)
+//    private String passwordCf;
 
     private String nickName;
 
@@ -31,6 +31,6 @@ public class SysUser implements Serializable {
 
     private String registerTime;
 
-    @TableField(exist = false)
-    private Integer groupid;
+//    @TableField(exist = false)
+//    private Integer groupid;
 }

@@ -1,5 +1,6 @@
 package com.jhh.rossystem.utils;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
@@ -11,8 +12,10 @@ public class Result<T> {
 
     private String msg;
 
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private Integer count;
 
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private T data;
 
     public static <T> Result<T> ok() {

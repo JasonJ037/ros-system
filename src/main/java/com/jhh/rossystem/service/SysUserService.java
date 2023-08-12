@@ -1,5 +1,6 @@
 package com.jhh.rossystem.service;
 
+import com.jhh.rossystem.controller.bao.UserUpdateRequest;
 import com.jhh.rossystem.entity.SysUser;
 import com.jhh.rossystem.utils.Result;
 
@@ -14,7 +15,7 @@ public interface SysUserService {
 
     Result delete(Integer id);
 
-    Result edit(SysUser sysUser);
+    Result edit(UserUpdateRequest userUpdateRequest);
 
     Result<SysUser> selectOne(Integer id);
 

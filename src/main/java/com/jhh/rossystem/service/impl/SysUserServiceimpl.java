@@ -4,15 +4,18 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.jhh.rossystem.controller.bao.UserUpdateRequest;
 import com.jhh.rossystem.entity.SysUser;
 import com.jhh.rossystem.mapper.SysContainerMapper;
 import com.jhh.rossystem.mapper.SysUserMapper;
 import com.jhh.rossystem.service.SysUserService;
 import com.jhh.rossystem.utils.Base64Util;
 import com.jhh.rossystem.utils.Result;
+import com.sun.org.apache.regexp.internal.RE;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -39,11 +42,11 @@ public class SysUserServiceimpl implements SysUserService {
             return Result.fail("用户名已经存在！");
         }
         // 密码与确认密码比较
-        if(StringUtils.isNotBlank(sysUser.getPassword()) && StringUtils.isNotBlank(sysUser.getPasswordCf())){
-            if(!sysUser.getPassword().equals(sysUser.getPasswordCf())){
-                return Result.fail("两次密码不一致,请重试！");
-            }
-        }
+//        if(StringUtils.isNotBlank(sysUser.getPassword()) && StringUtils.isNotBlank(sysUser.getPasswordCf())){
+//            if(!sysUser.getPassword().equals(sysUser.getPasswordCf())){
+//                return Result.fail("两次密码不一致,请重试！");
+//            }
+//        }
         if (StringUtils.isBlank(sysUser.getPassword())) {
             sysUser.setPassword("123456");
         } else{
@@ -126,19 +129,57 @@ public class SysUserServiceimpl implements SysUserService {
     }
 
     @Override
-    public Result edit(SysUser sysUser) {
-        String password = Base64Util.encrypt(sysUser.getPassword());
-        sysUser.setPassword(password);
-        int i = sysUserMapper.updateById(sysUser);
-        if (i == 0) {
-            return Result.fail("修改失败！");
+    public Result edit(UserUpdateRequest request) {
+        SysUser loggedInUser = (SysUser) session.getAttribute("user");
+
+        if (loggedInUser != null) {
+            // 进行权限判断
+            if (isAdminUser(loggedInUser)) {
+                // 管理员权限，允许编辑用户信息
+                SysUser sysUser = sysUserMapper.selectById(request.getUser_id());
+                if (sysUser==null){
+                    return Result.fail("用户不存在");
+                }
+                //编辑用户信息
+                updateUserFields(request, sysUser);
+
+                int i = sysUserMapper.updateById(sysUser);
+                if(i==0){
+                    return Result.fail("用户信息编辑失败！");
+                }
+
+                return Result.ok("用户信息编辑成功！");
+
+            } else {
+                //用户权限，允许用户修改密码
+                String s = Base64Util.dEncrypt(loggedInUser.getPassword());
+                if(!request.getOldpwd().equals(s))
+                {
+                    return Result.fail("旧密码错误");
+                }else if(request.getOldpwd().equals(request.getNewpwd())){
+                    return Result.fail("新密码不能与旧密码相同");
+                }
+
+                String password = Base64Util.encrypt(request.getNewpwd());
+                loggedInUser.setPassword(password);
+                int i = sysUserMapper.updateById(loggedInUser);
+                if (i == 0) {
+                    return Result.fail("修改失败！");
+                }
+                return Result.ok();
+            }
+        } else {
+            return Result.fail("用户未登录或Session已过期，请重新登录！");
         }
-        return Result.ok();
     }
+
 
     @Override
     public Result<SysUser> selectOne(Integer id) {
         SysUser sysUser = sysUserMapper.selectById(id);
+        if(sysUser==null){
+            return Result.fail("查询失败，没有该用户");
+        }
         String password = Base64Util.dEncrypt(sysUser.getPassword());
         sysUser.setPassword(password);
         return Result.ok(sysUser);
@@ -153,6 +194,26 @@ public class SysUserServiceimpl implements SysUserService {
         QueryWrapper<SysUser> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("username", username);
         return sysUserMapper.selectOne(queryWrapper);
+    }
+
+    private boolean isAdminUser(SysUser user) {
+        return user.getRole()==1;
+    }
+
+    private void updateUserFields(UserUpdateRequest request, SysUser user) {
+        if (request.getUsername() != null) {
+            user.setUsername(request.getUsername());
+        }
+        if (request.getNickName() != null) {
+            user.setNickName(request.getNickName());
+        }
+        if (request.getRole() != null) {
+            user.setRole(request.getRole());
+        }
+        if (request.getNewpwd() != null) {
+            String password = Base64Util.encrypt(request.getNewpwd());
+            user.setPassword(password);
+        }
     }
 
 }
