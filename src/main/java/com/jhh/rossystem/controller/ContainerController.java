@@ -36,7 +36,7 @@ public class ContainerController {
     }
 
     @PostMapping("/add")
-    public  Result add(@RequestBody ContainerAddObject containerAddObject)
+    public Result add(@RequestBody ContainerAddObject containerAddObject)
     {
 //        SysUser user = (SysUser) session.getAttribute("user");
 //        if (user.getRole()==2) {

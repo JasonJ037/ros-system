@@ -23,9 +23,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.Resource;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.List;
-import java.util.TimeZone;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
@@ -55,6 +53,44 @@ public class SysContainerServiceimpl implements SysContainerService {
 
         SysContainer sysContainer = sysContainerMapper.selectOne(queryWrapper);
 
+        Long count = sysContainerMapper.selectCount(queryWrapper);
+        //容器数量限制
+        if (4 <= count) {
+            return Result.fail("每个用户最多创建4个容器！");
+        }
+
+        //取出端口号
+        List<Integer> ports = containerAddObject.getPorts();
+        //判断用户输入的端口号是否有重复
+        Set<Integer> uniquePorts = new HashSet<>();
+        Set<Integer> duplicatePorts = new HashSet<>();
+
+        for (Integer port : ports) {
+            if (!uniquePorts.add(port)) {
+                duplicatePorts.add(port);
+            }
+        }
+
+        if (!duplicatePorts.isEmpty()) {
+            return Result.fail("输入端口号重复");
+        }
+
+        //检查容器端口是否已经存在
+        for(Integer port : ports){
+            QueryWrapper<ContainerPort> queryWrapper1=new QueryWrapper<>();
+            queryWrapper1.eq("port", port);
+            Long count1 = containerPortMapper.selectCount(queryWrapper1);
+
+            //端口占用检测
+            if(port < 1024){
+                return Result.fail("不允许使用该范围端口!");
+            }
+            if (count1!=0) {
+                return Result.fail("端口已被占用！");
+            }
+        }
+
+        //如果容器不存在，先创建一个容器
         if(sysContainer==null)
         {
             SysContainer sysContainer1 = new SysContainer();
@@ -71,72 +107,37 @@ public class SysContainerServiceimpl implements SysContainerService {
             sysContainer1.setCreateTime(sdf.format(new Date()));
 
             int i1 = sysContainerMapper.insert(sysContainer1);
+            if(i1==0) return Result.fail("失败");
 
-            ContainerPort containerPort = new ContainerPort();
-            containerPort.setContainerId(containerid);
-            containerPort.setPort(containerAddObject.getPort());
 
-            int i2 = containerPortMapper.insert(containerPort);
 
-            //调用的result返回消息的格式
-            if(i2==0|i1==0){return Result.fail("失败");}
+            for(Integer port: ports){
+                ContainerPort containerPort = new ContainerPort();
+                containerPort.setContainerId(containerid);
+                containerPort.setPort(port);
+
+                int i2 = containerPortMapper.insert(containerPort);
+
+                if(i2==0) return Result.fail("失败");
+            }
+
         }else {
-            String containerid = "46567asd";
-            ContainerPort containerPort = new ContainerPort();
-            containerPort.setContainerId(containerid);
-            containerPort.setPort(containerAddObject.getPort());
+            //容器存在，先取出容器的id
+            String containerid = sysContainer.getContainerId();
 
-            int i = containerPortMapper.insert(containerPort);
-            if (i == 0) return Result.fail("失败");
+            for(Integer port: ports){
+                ContainerPort containerPort = new ContainerPort();
+                containerPort.setContainerId(containerid);
+                containerPort.setPort(port);
+
+                int i2 = containerPortMapper.insert(containerPort);
+
+                if(i2==0) return Result.fail("失败");
+            }
         }
 
         return Result.ok(0,"");
 
-//        Integer count = Math.toIntExact(sysContainerMapper.selectCount(queryWrapper));
-//        //容器数量限制
-//        if (4 <= count) {
-//            return Result.fail("每个用户最多创建4个容器！");
-//        }
-//
-//        queryWrapper = new QueryWrapper<>();
-//        //对应着Port
-//        QueryWrapper<ContainerPort> queryWrapper1=new QueryWrapper<>();
-//
-//        //for全查完
-//        for(int i =0;i<containerAddObject.getParams().getArr().length;i++) {
-//            queryWrapper1.eq("port", containerAddObject.getParams().getArr()[i]);
-//
-//            count = Math.toIntExact(containerPortMapper.selectCount(queryWrapper1));
-//            //端口占用检测
-//            if (containerAddObject.getParams().getArr()[i] < 1024) {
-//                return Result.fail("不允许使用该范围端口!");
-//            }
-//            if (!count.equals(0)) {
-//                return Result.fail("端口已被占用！");
-//            }
-//        }
-//        containerAddObject.setContainerName(DockerUtil.generateName());
-//        //创建时间
-//        SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-//        sdf.setTimeZone(TimeZone.getTimeZone("GMT+8:00"));
-//        containerAddObject.setCreateTime(sdf.format(new Date()));
-//
-//        //runDocker可否不需要端口
-//        String dockerID = dockerService.runDocker(containerAddObject.getParams().getArr()[0], containerAddObject.getContainerName(), containerAddObject.getVersionid()); // 异步启动容器
-//        containerAddObject.setContainerId(dockerID.substring(0,12));
-//
-//        SysContainer sysContainer=new SysContainer();
-//        sysContainer.setContainerId(containerAddObject.getContainerId());
-//        sysContainer.setContainerName(containerAddObject.getContainerName());
-//        sysContainer.setUserId(containerAddObject.getUserid());
-//        sysContainer.setVersionId(containerAddObject.getVersionid());
-//        sysContainer.setCreateTime(containerAddObject.getCreateTime());
-//
-//        int i = sysContainerMapper.insert(sysContainer);
-//        if (i == 0) {
-//            return Result.fail("创建失败！");
-//        }
-//        return Result.ok("创建成功！"+dockerID);
     }
 
     @Override
