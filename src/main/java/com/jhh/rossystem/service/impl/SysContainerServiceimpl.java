@@ -98,7 +98,7 @@ public class SysContainerServiceimpl implements SysContainerService {
             sysContainer1.setUserId(containerAddObject.getUserid());
             sysContainer1.setStatus(0);
             //生成的容器id这里写死了，后期需要改
-            String containerid="46567asd";
+            String containerid="0e1613bd7236";
             sysContainer1.setContainerId(containerid);
             sysContainer1.setVersionId(containerAddObject.getVersionid());
 
@@ -192,6 +192,7 @@ public class SysContainerServiceimpl implements SysContainerService {
         if (i == 0) {
             return Result.fail("删除失败！");
         }
+
         return Result.ok("");
     }
 
@@ -201,7 +202,8 @@ public class SysContainerServiceimpl implements SysContainerService {
         if (null == container) {
             return Result.fail("容器不存在！");
         }
-        //channelUtil.startDocker(container.getContainerId());
+
+        channelUtil.startDocker(container.getContainerId());
         sysContainerMapper.updateStatus(1, id);
         return Result.ok();
     }
@@ -213,7 +215,7 @@ public class SysContainerServiceimpl implements SysContainerService {
         if (null == container) {
             return Result.fail("容器不存在！");
         }
-//        channelUtil.stopDocker(container.getContainerId());
+        channelUtil.stopDocker(container.getContainerId());
         sysContainerMapper.updateStatus(2, id);
         return Result.ok();
     }
