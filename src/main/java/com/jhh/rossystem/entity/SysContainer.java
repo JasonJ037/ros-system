@@ -8,6 +8,7 @@ import lombok.Data;
 
 import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
+import java.util.List;
 
 @Data
 @TableName("sys_container")
@@ -46,5 +47,5 @@ public class SysContainer implements Serializable {
     private String version;
 
     @TableField(exist = false)
-    private Integer port;
+    private List<Integer> ports;
 }

@@ -51,7 +51,7 @@ public class SysContainerServiceimpl implements SysContainerService {
         QueryWrapper<SysContainer> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("user_id", containerAddObject.getUserid());
 
-        SysContainer sysContainer = sysContainerMapper.selectOne(queryWrapper);
+//        SysContainer sysContainer = sysContainerMapper.selectOne(queryWrapper);
 
         Long count = sysContainerMapper.selectCount(queryWrapper);
         //容器数量限制
@@ -90,53 +90,43 @@ public class SysContainerServiceimpl implements SysContainerService {
             }
         }
 
-        //如果容器不存在，先创建一个容器
-        if(sysContainer==null)
-        {
-            SysContainer sysContainer1 = new SysContainer();
-            sysContainer1.setName(containerAddObject.getName());
-            sysContainer1.setUserId(containerAddObject.getUserid());
-            sysContainer1.setStatus(0);
-            //生成的容器id这里写死了，后期需要改
-            String containerid="46567asd";
-            sysContainer1.setContainerId(containerid);
-            sysContainer1.setVersionId(containerAddObject.getVersionid());
+        SysContainer sysContainer = new SysContainer();
+        sysContainer.setName(containerAddObject.getName());
+        sysContainer.setUserId(containerAddObject.getUserid());
+        sysContainer.setStatus(0);
+        // 生成的容器id这里写死了，后期需要改
+        String containerId = "123"; // 生成容器ID的逻辑需要根据实际需求修改
+//        System.out.println(dockerService.runDocker(8014,"wdd",0));
+//        String dockerID = dockerService.runDocker(sysContainer.getPort(), sysContainer.getContainerName(), sysContainer.getVersionId()); // 异步启动容器
+//        sysContainer.setContainerId(dockerID.substring(0,12));
+//        System.out.println(dockerID);
+        sysContainer.setContainerId(containerId);
+        sysContainer.setVersionId(containerAddObject.getVersionid());
 
-            SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-            sdf.setTimeZone(TimeZone.getTimeZone("GMT+8:00"));
-            sysContainer1.setCreateTime(sdf.format(new Date()));
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        sdf.setTimeZone(TimeZone.getTimeZone("GMT+8:00"));
+        sysContainer.setCreateTime(sdf.format(new Date()));
 
-            int i1 = sysContainerMapper.insert(sysContainer1);
-            if(i1==0) return Result.fail("失败");
+        int insertResult = sysContainerMapper.insert(sysContainer);
 
+        if (insertResult == 0) {
+            return Result.fail("容器创建失败");
+        }
 
+        // 为容器添加端口
+        for (Integer port : ports) {
+            ContainerPort containerPort = new ContainerPort();
+            containerPort.setContainerId(containerId);
+            containerPort.setPort(port);
 
-            for(Integer port: ports){
-                ContainerPort containerPort = new ContainerPort();
-                containerPort.setContainerId(containerid);
-                containerPort.setPort(port);
+            int portInsertResult = containerPortMapper.insert(containerPort);
 
-                int i2 = containerPortMapper.insert(containerPort);
-
-                if(i2==0) return Result.fail("失败");
-            }
-
-        }else {
-            //容器存在，先取出容器的id
-            String containerid = sysContainer.getContainerId();
-
-            for(Integer port: ports){
-                ContainerPort containerPort = new ContainerPort();
-                containerPort.setContainerId(containerid);
-                containerPort.setPort(port);
-
-                int i2 = containerPortMapper.insert(containerPort);
-
-                if(i2==0) return Result.fail("失败");
+            if (portInsertResult == 0) {
+                return Result.fail("端口创建失败");
             }
         }
 
-        return Result.ok(0,"");
+        return Result.ok(0, "添加成功");
 
     }
 
@@ -157,15 +147,29 @@ public class SysContainerServiceimpl implements SysContainerService {
         }
         queryWrapper.orderByAsc("id");
         iPage = sysContainerMapper.selectPage(iPage,queryWrapper);
-        List<SysContainer> list = iPage.getRecords();
+        List<SysContainer>  list = iPage.getRecords();
         if (list.isEmpty()) {
-            System.out.println("fail123");
             return Result.fail("查询为空");
         }
         List<Integer> userIds = list.stream().map(SysContainer::getUserId).collect(Collectors.toList());
         List<Integer> versionIds = list.stream().map(SysContainer::getVersionId).collect(Collectors.toList());
         List<SysUser> userList = sysUserMapper.selectBatchIds(userIds);
         List<Image> versionList = imageMapper.selectBatchIds(versionIds);
+
+        // 查询containerID对应的port列表，并存储在Map中
+        Map<String, List<Integer>> containerPortsMap = new HashMap<>();
+        List<String> containerIds = list.stream().map(SysContainer::getContainerId).collect(Collectors.toList());
+        for (String containerId : containerIds) {
+            //获取containerId对应的containerport对象
+            QueryWrapper<ContainerPort> queryWrapper1=new QueryWrapper<>();
+            queryWrapper1.eq("container_id",containerId);
+            List<ContainerPort> containerPorts = containerPortMapper.selectList(queryWrapper1);
+            //根据containerport对象获取port的list
+            List<Integer> portList = containerPorts.stream()
+                    .map(ContainerPort::getPort) // 使用map方法提取port属性
+                    .collect(Collectors.toList());
+            containerPortsMap.put(String.valueOf(containerId), portList);
+        }
         //把查出来的容器的关联对象user的信息填全
         for (SysContainer container : list) {
             for (SysUser user : userList) {
@@ -181,6 +185,10 @@ public class SysContainerServiceimpl implements SysContainerService {
                     break;
                 }
             }
+            // 获取containerID对应的port列表
+            List<Integer> portList = containerPortsMap.get(container.getContainerId());
+            // 将port列表赋给SysContainer对象的port属性
+            container.setPorts(portList);
         }
         return Result.page(Math.toIntExact(iPage.getTotal()), list);
     }
