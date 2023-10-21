@@ -8,7 +8,7 @@ import lombok.experimental.Accessors;
 @Accessors(chain = true)
 public class Result<T> {
 
-    private Integer code;
+    private Integer status;
 
     private String msg;
 
@@ -66,7 +66,7 @@ public class Result<T> {
 
     public static <T> Result<T> result(int code, String msg, T data) {
         Result<T> result = new Result<T>();
-        result.setCode(code);
+        result.setStatus(code);
         result.setMsg(msg);
         result.setData(data);
         return result;
@@ -74,7 +74,7 @@ public class Result<T> {
 
     public static <T> Result<T> page(Integer count, T data) {
         Result<T> result = new Result<>();
-        result.setCode(0);
+        result.setStatus(0);
         result.setMsg("成功");
         result.setData(data);
         result.setCount(count);

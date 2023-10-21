@@ -1,5 +1,6 @@
 package com.jhh.rossystem.controller;
 
+
 import com.jhh.rossystem.controller.bao.RequestObject;
 import com.jhh.rossystem.controller.bao.UserUpdateRequest;
 import com.jhh.rossystem.entity.SysUser;
@@ -56,10 +57,5 @@ public class UserController {
     public Result login(@Valid @RequestBody SysUser user) {
         return sysUserService.login(user);
     }
-
-
-
-
-
 
 }
