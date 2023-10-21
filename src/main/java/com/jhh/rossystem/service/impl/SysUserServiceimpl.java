@@ -11,7 +11,6 @@ import com.jhh.rossystem.mapper.SysUserMapper;
 import com.jhh.rossystem.service.SysUserService;
 import com.jhh.rossystem.utils.Base64Util;
 import com.jhh.rossystem.utils.Result;
-import com.sun.org.apache.regexp.internal.RE;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -85,7 +84,7 @@ public class SysUserServiceimpl implements SysUserService {
             return Result.fail("密码错误！");
         }
         session.setAttribute("user", user);
-        return Result.ok();
+        return Result.ok(0, "成功",user);
     }
 
     @Override
