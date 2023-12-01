@@ -134,7 +134,7 @@ public class ChannelUtil {
     }
 
     public String runDocker(Integer port, String dockerName, String version) {
-        String cmd = "docker run --privileged -d -p " + port + ":80 --expose=5900 "  + " --name=\"" + dockerName + "\" " + version;
+        String cmd = "docker run --privileged -d -p " + port + ":8080 --expose=5900 "  + " --name=\"" + dockerName + "\" " + version;
         String containerID = executeCommand(cmd);
         return containerID;
     }

@@ -12,12 +12,13 @@ public class Image implements Serializable {
 
     @TableId(type = IdType.AUTO)
     private Integer id;
-
+    @TableField("version")
     private String version;
 
     @TableField("create_time")
     private String createTime;
 
+    @TableField("content")
     private String content;
 
 }

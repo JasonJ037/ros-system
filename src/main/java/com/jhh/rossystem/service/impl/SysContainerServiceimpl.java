@@ -95,7 +95,12 @@ public class SysContainerServiceimpl implements SysContainerService {
         sysContainer.setUserId(containerAddObject.getUserid());
         sysContainer.setStatus(0);
         // 生成的容器id这里写死了，后期需要改
-        String containerId = "123"; // 生成容器ID的逻辑需要根据实际需求修改
+
+//        int imageid = containerAddObject.getImageid();
+        Image im = imageMapper.selectById(containerAddObject.getImageid());
+
+        String containerId = channelUtil.runDocker(ports.get(0), sysContainer.getName(), im.getVersion());; // 生成容器ID的逻辑需要根据实际需求修改
+        containerId = containerId.substring(0, 12);
 //        System.out.println(dockerService.runDocker(8014,"wdd",0));
 //        String dockerID = dockerService.runDocker(sysContainer.getPort(), sysContainer.getContainerName(), sysContainer.getVersionId()); // 异步启动容器
 //        sysContainer.setContainerId(dockerID.substring(0,12));
@@ -110,6 +115,7 @@ public class SysContainerServiceimpl implements SysContainerService {
         int insertResult = sysContainerMapper.insert(sysContainer);
 
         if (insertResult == 0) {
+            channelUtil.rmDocker(sysContainer.getName());
             return Result.fail("容器创建失败");
         }
 
@@ -125,7 +131,6 @@ public class SysContainerServiceimpl implements SysContainerService {
                 return Result.fail("端口创建失败");
             }
         }
-
         return Result.ok(0, "添加成功");
 
     }
@@ -195,11 +200,14 @@ public class SysContainerServiceimpl implements SysContainerService {
 
     @Override
     public Result delete(Integer id) {
+
+        SysContainer container = sysContainerMapper.selectById(id);
         int i = 0;
         i = sysContainerMapper.deleteById(id);
         if (i == 0) {
             return Result.fail("删除失败！");
         }
+        channelUtil.rmDocker(container.getName());
         return Result.ok("");
     }
 
@@ -209,7 +217,7 @@ public class SysContainerServiceimpl implements SysContainerService {
         if (null == container) {
             return Result.fail("容器不存在！");
         }
-        //channelUtil.startDocker(container.getContainerId());
+        channelUtil.startDocker(container.getName());
         sysContainerMapper.updateStatus(1, id);
         return Result.ok();
     }
@@ -221,7 +229,7 @@ public class SysContainerServiceimpl implements SysContainerService {
         if (null == container) {
             return Result.fail("容器不存在！");
         }
-//        channelUtil.stopDocker(container.getContainerId());
+        channelUtil.stopDocker(container.getName());
         sysContainerMapper.updateStatus(2, id);
         return Result.ok();
     }
@@ -237,8 +245,8 @@ public class SysContainerServiceimpl implements SysContainerService {
             return Result.fail("容器数据异常！");
         }
         String filename = file.getOriginalFilename();
-//        channelUtil.uploadFile(file);
-//        channelUtil.dockerCp(containerId, filename);
+        channelUtil.uploadFile(file);
+        //channelUtil.dockerCp(containerId, filename);
         return Result.ok();
     }
 
