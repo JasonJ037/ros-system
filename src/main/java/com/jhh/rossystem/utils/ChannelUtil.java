@@ -36,6 +36,9 @@ public class ChannelUtil {
     @Value("${shell.docker.file.path}")
     private String dockerPath;
 
+    @Value("${shell.docker.dockerfilePath}")
+    private String dockerfilePath;
+
     public String executeCommand(String command) {
         log.info("exec cmd:" + command);
         JSch jsch = new JSch();
@@ -131,6 +134,16 @@ public class ChannelUtil {
     public void dockerCp(String containerId, String filename) {
         String cmd = "docker cp " + filePath + filename + " " + containerId + ":" + dockerPath;
         executeCommand(cmd);
+    }
+    public String buildDocker(String version, String path) {
+        String cmd = "docker build -t " + version + " " + path;
+        String imageID = executeCommand(cmd);
+        return imageID;
+    }
+    public String rmiDocker(String version) {
+        String cmd = "docker rmi " + version;
+        String imageID = executeCommand(cmd);
+        return imageID;
     }
 
     public String runDocker(Integer port, String dockerName, String version) {

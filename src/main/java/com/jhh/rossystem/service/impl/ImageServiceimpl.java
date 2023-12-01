@@ -5,8 +5,10 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.jhh.rossystem.entity.Image;
+import com.jhh.rossystem.entity.SysContainer;
 import com.jhh.rossystem.mapper.ImageMapper;
 import com.jhh.rossystem.service.ImageService;
+import com.jhh.rossystem.utils.ChannelUtil;
 import com.jhh.rossystem.utils.Result;
 import org.springframework.stereotype.Service;
 
@@ -21,7 +23,9 @@ public class ImageServiceimpl implements ImageService {
     @Resource
     private ImageMapper imageMapper;
 
-    // 测试提交
+    @Resource
+    private ChannelUtil channelUtil;
+
     @Override
     public Result add(Image image) {
         //创建时间
@@ -32,6 +36,7 @@ public class ImageServiceimpl implements ImageService {
         if (i != 1) {
             return Result.fail();
         }
+        channelUtil.buildDocker(image.getVersion(), image.getContent());
         return Result.ok();
     }
 
@@ -76,10 +81,13 @@ public class ImageServiceimpl implements ImageService {
 
     @Override
     public Result delete(Integer id) {
+        Image image = imageMapper.selectById(id);
+
         int i = imageMapper.deleteById(id);
         if (i == 0) {
             return Result.fail("删除失败！");
         }
+        channelUtil.rmiDocker(image.getVersion());
         return Result.ok();
     }
 
