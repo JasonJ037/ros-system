@@ -91,15 +91,15 @@ public class SysUserServiceimpl implements SysUserService {
     public Result<List<SysUser>> pageList(String querySearch, String value, Integer page, Integer limit) {
         IPage<SysUser> iPage = new Page<>(page, limit);
         QueryWrapper<SysUser> queryWrapper = new QueryWrapper<>();
-        queryWrapper.eq("role", 2);
+        queryWrapper.eq("role", 1);
         // 查询条件
         if ("username".equals(querySearch)) {
             queryWrapper.like("username", value);
         } else if ("nick_name".equals(querySearch)) {
             queryWrapper.like("nick_name", value);
-        } else if ("role".equals(querySearch)) {
-            queryWrapper.eq("role", value);
-        }
+        } //else if ("role".equals(querySearch)) {
+        //    queryWrapper.eq("role", value);
+        //}
         queryWrapper.orderByAsc("id");
         iPage = sysUserMapper.selectPage(iPage, queryWrapper);
         List<SysUser> list = iPage.getRecords();
