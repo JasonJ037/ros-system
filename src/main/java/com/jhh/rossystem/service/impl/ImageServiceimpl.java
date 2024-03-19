@@ -32,11 +32,22 @@ public class ImageServiceimpl implements ImageService {
         SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         sdf.setTimeZone(TimeZone.getTimeZone("GMT+8:00"));
         image.setCreateTime(sdf.format(new Date()));
+        //存入数据库
         int i = imageMapper.insert(image);
         if (i != 1) {
             return Result.fail();
         }
-        channelUtil.buildDocker(image.getVersion(), image.getContent());
+        //实际操作镜像
+        if (ChannelUtil.isPath(image.getContent())) {
+            // 如果是路径，执行构建镜像
+            channelUtil.buildDocker(image.getVersion(), image.getContent());
+        } else {
+            // 如果不是路径，直接把镜像拉取过来
+            if( ! channelUtil.pullImage(image.getVersion())){
+                return Result.fail();
+            }
+        }
+        
         return Result.ok();
     }
 
@@ -51,7 +62,16 @@ public class ImageServiceimpl implements ImageService {
 
     @Override
     public Result<List<Image>> pageList(String querySearch,String value, Integer page, Integer limit) {
-        IPage<Image> iPage = new Page<>(page, limit);
+        
+        IPage<Image> iPage;
+
+        if (page != null && limit != null) {
+            iPage = new Page<>(page, limit);
+        } else {
+            // 如果 page 或 limit 为 null，创建一个不进行分页的 IPage 对象
+            iPage = new Page<>();
+        }
+    
         QueryWrapper<Image> queryWrapper = new QueryWrapper<>();
 
         if("id".equals(querySearch)){

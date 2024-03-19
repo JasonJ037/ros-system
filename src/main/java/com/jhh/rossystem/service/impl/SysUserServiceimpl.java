@@ -89,7 +89,15 @@ public class SysUserServiceimpl implements SysUserService {
 
     @Override
     public Result<List<SysUser>> pageList(String querySearch, String value, Integer page, Integer limit) {
-        IPage<SysUser> iPage = new Page<>(page, limit);
+        IPage<SysUser> iPage;
+
+        if (page != null && limit != null) {
+            iPage = new Page<>(page, limit);
+        } else {
+            // 如果 page 或 limit 为 null，创建一个不进行分页的 IPage 对象
+            iPage = new Page<>();
+        }
+    
         QueryWrapper<SysUser> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("role", 1);
         // 查询条件

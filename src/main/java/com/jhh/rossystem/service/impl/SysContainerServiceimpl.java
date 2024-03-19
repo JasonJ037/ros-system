@@ -136,7 +136,15 @@ public class SysContainerServiceimpl implements SysContainerService {
 
     @Override
     public Result<List<SysContainer>> pageList(String querySearch, String value, Integer page, Integer limit) {
-        IPage<SysContainer> iPage = new Page<>(page, limit);
+        IPage<SysContainer> iPage;
+
+        if (page != null && limit != null) {
+            iPage = new Page<>(page, limit);
+        } else {
+            // 如果 page 或 limit 为 null，创建一个不进行分页的 IPage 对象
+            iPage = new Page<>();
+        }
+    
         QueryWrapper<SysContainer> queryWrapper = new QueryWrapper<>();
         //queryWrapper.eq(null != querySearch, "user_id", querySearch);
         // 查询条件

@@ -13,6 +13,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.nio.file.*;
 
 @Slf4j
 @Component
@@ -88,6 +89,7 @@ public class ChannelUtil {
                 e.printStackTrace();
             }
         }
+        log.info(" result:" + stringBuilder.toString());
         return stringBuilder.toString();
     }
 
@@ -135,6 +137,18 @@ public class ChannelUtil {
         String cmd = "docker cp " + filePath + filename + " " + containerId + ":" + dockerPath;
         executeCommand(cmd);
     }
+    public static boolean isPath(String input){
+        //如果字符串以“~”开头或者以“/”开头，说明是路径
+        return input.startsWith("~") || input.startsWith("/");
+    }
+    public Boolean pullImage(String version) {
+        String cmd = "docker pull " + version;
+        String result = executeCommand(cmd);
+        if (result.contains("complete")) {
+            return true;
+        }
+        return false;
+    }
     public String buildDocker(String version, String path) {
         String cmd = "docker build -t " + version + " " + path;
         String imageID = executeCommand(cmd);
@@ -147,7 +161,7 @@ public class ChannelUtil {
     }
 
     public String runDocker(Integer port, String dockerName, String version) {
-        String cmd = "docker run --privileged -d -p " + port + ":8080 --expose=5900 "  + " --name=\"" + dockerName + "\" " + version;
+        String cmd = "docker run -d -p " + port + ":80 --expose=5900 "  + " --name=\"" + dockerName + "\" " + version;
         String containerID = executeCommand(cmd);
         return containerID;
     }
