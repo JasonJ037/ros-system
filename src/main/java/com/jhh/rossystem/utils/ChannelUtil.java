@@ -132,10 +132,37 @@ public class ChannelUtil {
         String cmd = "docker ps -aqf \"name=" + containerName + "\"";
         return executeCommand(cmd);
     }
-
-    public void dockerCp(String containerId, String filename) {
-        String cmd = "docker cp " + filePath + filename + " " + containerId + ":" + dockerPath;
+    public void dockerCp(String from, String to) {
+        String cmd = "docker cp " + from + " " + to;
         executeCommand(cmd);
+    }
+    /**
+     * 将指定文件上传到Docker容器中。
+     * @param containerId Docker容器的ID。
+     * @param filename 需要上传的文件名称。
+     * 该方法不返回任何值。
+     */
+    public void dockerUpload(String containerId, String filename) {
+        // 拼接文件的本地路径
+        String from = filePath + filename;
+        // 拼接容器内的目标路径
+        String to = containerID + ":" + dockerPath;
+        // 执行Docker复制命令，将文件从本地复制到容器中
+        dockerCp(from, to);
+    }
+    /**
+     * 从指定的Docker容器中下载文件。
+     * @param containerId Docker容器的ID。
+     * @param filename 需要下载的文件名称。
+     * 此方法通过调用dockerCp函数，将指定容器内的文件复制到本地文件系统。
+     */
+    public void dockerDownload(String containerId, String filename) {
+        // 构造容器内的文件路径
+        String from = containerId + ":" + dockerPath + filename;
+        // 指定本地保存文件的路径
+        String to = filePath;
+        // 执行文件复制操作
+        dockerCp(from, to);
     }
     public static boolean isPath(String input){
         //如果字符串以“~”开头或者以“/”开头，说明是路径
@@ -162,6 +189,11 @@ public class ChannelUtil {
 
     public String runDocker(Integer port, String dockerName, String version) {
         String cmd = "docker run -d -p " + port + ":80 --expose=5900 "  + " --name=\"" + dockerName + "\" " + version;
+        String containerID = executeCommand(cmd);
+        return containerID;
+    }
+    public String runDocker(String config, String dockerName, String version) {
+        String cmd = "docker run -d" + config + " --name=\"" + dockerName + "\" " + version;
         String containerID = executeCommand(cmd);
         return containerID;
     }

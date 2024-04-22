@@ -1,0 +1,585 @@
+nohup: 忽略输入
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::               (v2.6.13)
+
+2024-01-22 16:09:14.856  INFO 3152780 --- [           main] com.jhh.rossystem.RosSystemApplication   : Starting RosSystemApplication using Java 11.0.21 on micl-Super-Server with PID 3152780 (/home/micl/ros-web/ros-system/target/ros-system-0.0.1-SNAPSHOT.jar started by micl in /home/micl/ros-web/ros-system)
+2024-01-22 16:09:14.858  INFO 3152780 --- [           main] com.jhh.rossystem.RosSystemApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-01-22 16:09:15.877  INFO 3152780 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8022 (http)
+2024-01-22 16:09:15.887  INFO 3152780 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-22 16:09:15.887  INFO 3152780 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2024-01-22 16:09:15.959  INFO 3152780 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-22 16:09:15.959  INFO 3152780 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1053 ms
+ _ _   |_  _ _|_. ___ _ |    _ 
+| | |\/|_)(_| | |_\  |_)||_|_\ 
+     /               |         
+                        3.5.2 
+2024-01-22 16:09:16.401  WARN 3152780 --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'commandController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.jhh.rossystem.service.CommandService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup="", name="", description="", authenticationType=CONTAINER, type=java.lang.Object.class, mappedName="")}
+2024-01-22 16:09:16.405  INFO 3152780 --- [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-01-22 16:09:16.423  INFO 3152780 --- [           main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-01-22 16:09:16.441 ERROR 3152780 --- [           main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+A component required a bean of type 'com.jhh.rossystem.service.CommandService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.jhh.rossystem.service.CommandService' in your configuration.
+
+nohup: 忽略输入
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::               (v2.6.13)
+
+2024-01-22 16:14:15.176  INFO 3156807 --- [           main] com.jhh.rossystem.RosSystemApplication   : Starting RosSystemApplication using Java 11.0.21 on micl-Super-Server with PID 3156807 (/home/micl/ros-web/ros-system/target/ros-system-0.0.1-SNAPSHOT.jar started by micl in /home/micl/ros-web/ros-system)
+2024-01-22 16:14:15.178  INFO 3156807 --- [           main] com.jhh.rossystem.RosSystemApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-01-22 16:14:16.106  INFO 3156807 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8022 (http)
+2024-01-22 16:14:16.114  INFO 3156807 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-22 16:14:16.115  INFO 3156807 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2024-01-22 16:14:16.168  INFO 3156807 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-22 16:14:16.168  INFO 3156807 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 950 ms
+ _ _   |_  _ _|_. ___ _ |    _ 
+| | |\/|_)(_| | |_\  |_)||_|_\ 
+     /               |         
+                        3.5.2 
+2024-01-22 16:14:16.903  INFO 3156807 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8022 (http) with context path ''
+2024-01-22 16:14:16.913  INFO 3156807 --- [           main] com.jhh.rossystem.RosSystemApplication   : Started RosSystemApplication in 2.197 seconds (JVM running for 2.618)
+2024-01-22 16:14:41.844  INFO 3156807 --- [nio-8022-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-22 16:14:41.844  INFO 3156807 --- [nio-8022-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-22 16:14:41.846  INFO 3156807 --- [nio-8022-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-01-22 16:14:42.042  INFO 3156807 --- [nio-8022-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-22 16:14:42.389  INFO 3156807 --- [nio-8022-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-22 16:15:01.978  INFO 3156807 --- [nio-8022-exec-4] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:docker start testcon
+2024-01-22 16:15:02.438  INFO 3156807 --- [nio-8022-exec-4] com.jhh.rossystem.utils.ChannelUtil      :  result:testcon
+2024-01-22 16:15:15.295  INFO 3156807 --- [nio-8022-exec-6] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:null
+2024-01-22 16:15:15.628  INFO 3156807 --- [nio-8022-exec-6] com.jhh.rossystem.utils.ChannelUtil      : exec cmd errornull
+2024-01-22 16:15:15.640 ERROR 3156807 --- [nio-8022-exec-6] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+
+java.lang.NullPointerException: null
+	at com.jhh.rossystem.utils.ChannelUtil.executeCommand(ChannelUtil.java:87) ~[classes!/:na]
+	at com.jhh.rossystem.service.impl.CommandServiceImpl.queryCommand(CommandServiceImpl.java:21) ~[classes!/:na]
+	at com.jhh.rossystem.controller.CommandController.queryCommand(CommandController.java:24) ~[classes!/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.23.jar!/:5.3.23]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.23.jar!/:5.3.23]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.23.jar!/:5.3.23]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.23.jar!/:5.3.23]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.23.jar!/:5.3.23]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.23.jar!/:5.3.23]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071) ~[spring-webmvc-5.3.23.jar!/:5.3.23]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964) ~[spring-webmvc-5.3.23.jar!/:5.3.23]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.23.jar!/:5.3.23]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.23.jar!/:5.3.23]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:696) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.23.jar!/:5.3.23]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.68.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.23.jar!/:5.3.23]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.23.jar!/:5.3.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.23.jar!/:5.3.23]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.23.jar!/:5.3.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.23.jar!/:5.3.23]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.23.jar!/:5.3.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+
+2024-01-22 16:16:18.147  INFO 3156807 --- [nio-8022-exec-7] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:null
+2024-01-22 16:16:18.476  INFO 3156807 --- [nio-8022-exec-7] com.jhh.rossystem.utils.ChannelUtil      : exec cmd errornull
+2024-01-22 16:16:18.478 ERROR 3156807 --- [nio-8022-exec-7] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+
+java.lang.NullPointerException: null
+	at com.jhh.rossystem.utils.ChannelUtil.executeCommand(ChannelUtil.java:87) ~[classes!/:na]
+	at com.jhh.rossystem.service.impl.CommandServiceImpl.queryCommand(CommandServiceImpl.java:21) ~[classes!/:na]
+	at com.jhh.rossystem.controller.CommandController.queryCommand(CommandController.java:24) ~[classes!/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.23.jar!/:5.3.23]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.23.jar!/:5.3.23]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.23.jar!/:5.3.23]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.23.jar!/:5.3.23]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.23.jar!/:5.3.23]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.23.jar!/:5.3.23]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071) ~[spring-webmvc-5.3.23.jar!/:5.3.23]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964) ~[spring-webmvc-5.3.23.jar!/:5.3.23]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.23.jar!/:5.3.23]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.23.jar!/:5.3.23]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:696) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.23.jar!/:5.3.23]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.68.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.23.jar!/:5.3.23]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.23.jar!/:5.3.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.23.jar!/:5.3.23]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.23.jar!/:5.3.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.23.jar!/:5.3.23]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.23.jar!/:5.3.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+
+2024-01-22 16:23:51.783  INFO 3156807 --- [nio-8022-exec-9] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:docker start testcon
+2024-01-22 16:23:52.113  INFO 3156807 --- [nio-8022-exec-9] com.jhh.rossystem.utils.ChannelUtil      :  result:testcon
+2024-01-22 16:24:11.573  INFO 3156807 --- [nio-8022-exec-2] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:ls
+2024-01-22 16:24:11.900  INFO 3156807 --- [nio-8022-exec-2] com.jhh.rossystem.utils.ChannelUtil      :  result:anaconda3			  Downloads  nohup.out	ros_ws	     test_py.pycuda_12.2.2_535.104.05_linux.run  geth-ros   Pictures	snap	     test.shDesktop				  java	     Public	Templates    VideosDocuments			  Music      ros-web	test_eth.py
+2024-01-22 16:25:45.038  INFO 3156807 --- [nio-8022-exec-4] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:ls
+2024-01-22 16:25:45.336  INFO 3156807 --- [nio-8022-exec-4] com.jhh.rossystem.utils.ChannelUtil      :  result:anaconda3			  Downloads  nohup.out	ros_ws	     test_py.pycuda_12.2.2_535.104.05_linux.run  geth-ros   Pictures	snap	     test.shDesktop				  java	     Public	Templates    VideosDocuments			  Music      ros-web	test_eth.py
+2024-01-22 16:27:23.230  INFO 3156807 --- [nio-8022-exec-6] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:ls
+2024-01-22 16:27:23.516  INFO 3156807 --- [nio-8022-exec-6] com.jhh.rossystem.utils.ChannelUtil      :  result:anaconda3			  Downloads  nohup.out	ros_ws	     test_py.pycuda_12.2.2_535.104.05_linux.run  geth-ros   Pictures	snap	     test.shDesktop				  java	     Public	Templates    VideosDocuments			  Music      ros-web	test_eth.py
+2024-01-22 16:28:20.687  INFO 3156807 --- [nio-8022-exec-8] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:ls
+2024-01-22 16:28:20.976  INFO 3156807 --- [nio-8022-exec-8] com.jhh.rossystem.utils.ChannelUtil      :  result:anaconda3			  Downloads  nohup.out	ros_ws	     test_py.pycuda_12.2.2_535.104.05_linux.run  geth-ros   Pictures	snap	     test.shDesktop				  java	     Public	Templates    VideosDocuments			  Music      ros-web	test_eth.py
+2024-01-22 16:28:34.406  INFO 3156807 --- [io-8022-exec-10] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:ps
+2024-01-22 16:28:34.753  INFO 3156807 --- [io-8022-exec-10] com.jhh.rossystem.utils.ChannelUtil      :  result:    PID TTY          TIME CMD3167695 pts/1    00:00:00 ps
+2024-01-22 16:39:07.764  INFO 3156807 --- [nio-8022-exec-9] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:pwd
+2024-01-22 16:39:08.073  INFO 3156807 --- [nio-8022-exec-9] com.jhh.rossystem.utils.ChannelUtil      :  result:/home/micl
+2024-01-22 16:39:26.962  INFO 3156807 --- [nio-8022-exec-1] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:pwd
+2024-01-22 16:39:27.266  INFO 3156807 --- [nio-8022-exec-1] com.jhh.rossystem.utils.ChannelUtil      :  result:/home/micl
+2024-01-22 16:46:11.390  INFO 3156807 --- [nio-8022-exec-2] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:docker ps |grep 7903
+2024-01-22 16:46:11.714  INFO 3156807 --- [nio-8022-exec-2] com.jhh.rossystem.utils.ChannelUtil      :  result:
+2024-01-22 16:46:26.311  INFO 3156807 --- [nio-8022-exec-3] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:docker ps |grep 7902
+2024-01-22 16:46:26.676  INFO 3156807 --- [nio-8022-exec-3] com.jhh.rossystem.utils.ChannelUtil      :  result:7d7e479d41fe   sxiaocaicai/new-ros-full-vnc:16.04   "/startup.sh"             2 days ago     Up 2 days (healthy)     5900/tcp, 0.0.0.0:7902->80/tcp, :::7902->80/tcp                                    testcon
+2024-01-22 17:11:25.013  INFO 3156807 --- [io-8022-exec-10] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:ipconfig
+2024-01-22 17:11:25.323  INFO 3156807 --- [io-8022-exec-10] com.jhh.rossystem.utils.ChannelUtil      :  result:bash: ipconfig：未找到命令
+2024-01-22 17:11:31.085  INFO 3156807 --- [nio-8022-exec-9] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:ifconfig
+2024-01-22 17:11:31.393  INFO 3156807 --- [nio-8022-exec-9] com.jhh.rossystem.utils.ChannelUtil      :  result:br-fadef6d167de: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500        inet 172.21.0.1  netmask 255.255.0.0  broadcast 172.21.255.255        ether 02:42:8e:31:56:e8  txqueuelen 0  (以太网)        RX packets 0  bytes 0 (0.0 B)        RX errors 0  dropped 0  overruns 0  frame 0        TX packets 0  bytes 0 (0.0 B)        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0docker0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500        inet 172.17.0.1  netmask 255.255.0.0  broadcast 172.17.255.255        inet6 fe80::42:c0ff:fe96:f868  prefixlen 64  scopeid 0x20<link>        ether 02:42:c0:96:f8:68  txqueuelen 0  (以太网)        RX packets 18637459  bytes 74835579435 (74.8 GB)        RX errors 0  dropped 0  overruns 0  frame 0        TX packets 23350869  bytes 50467287124 (50.4 GB)        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0docker_gwbridge: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500        inet 172.18.0.1  netmask 255.255.0.0  broadcast 172.18.255.255        inet6 fe80::42:1cff:fede:496f  prefixlen 64  scopeid 0x20<link>        ether 02:42:1c:de:49:6f  txqueuelen 0  (以太网)        RX packets 10618793  bytes 2695008494 (2.6 GB)        RX errors 0  dropped 0  overruns 0  frame 0        TX packets 315959  bytes 286586844 (286.5 MB)        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0eno1: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500        ether 3c:ec:ef:b1:a2:96  txqueuelen 1000  (以太网)        RX packets 0  bytes 0 (0.0 B)        RX errors 0  dropped 0  overruns 0  frame 0        TX packets 0  bytes 0 (0.0 B)        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0eno2: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500        ether 3c:ec:ef:b1:a2:97  txqueuelen 1000  (以太网)        RX packets 0  bytes 0 (0.0 B)        RX errors 0  dropped 0  overruns 0  frame 0        TX packets 0  bytes 0 (0.0 B)        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0enp216s0f0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500        ether a0:36:9f:a4:37:66  txqueuelen 1000  (以太网)        RX packets 0  bytes 0 (0.0 B)        RX errors 0  dropped 0  overruns 0  frame 0        TX packets 0  bytes 0 (0.0 B)        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0        device memory 0xfbc00000-fbcfffff  enp216s0f1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500        inet 115.25.41.98  netmask 255.255.255.0  broadcast 115.25.41.255        inet6 2001:da8:208:23e::bf1:9b55  prefixlen 128  scopeid 0x0<global>        inet6 fe80::76d8:d385:ff58:c31f  prefixlen 64  scopeid 0x20<link>        ether a0:36:9f:a4:37:67  txqueuelen 1000  (以太网)        RX packets 412560575  bytes 176412851674 (176.4 GB)        RX errors 0  dropped 1701  overruns 0  frame 0        TX packets 373190655  bytes 371947610319 (371.9 GB)        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0        device memory 0xfbb00000-fbbfffff  lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536        inet 127.0.0.1  netmask 255.0.0.0        inet6 ::1  prefixlen 128  scopeid 0x10<host>        loop  txqueuelen 1000  (本地环回)        RX packets 377475380  bytes 185408865838 (185.4 GB)        RX errors 0  dropped 0  overruns 0  frame 0        TX packets 377475380  bytes 185408865838 (185.4 GB)        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0veth1099539: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500        inet6 fe80::60c2:c7ff:fe3c:cc4a  prefixlen 64  scopeid 0x20<link>        ether 62:c2:c7:3c:cc:4a  txqueuelen 0  (以太网)        RX packets 0  bytes 0 (0.0 B)        RX errors 0  dropped 0  overruns 0  frame 0        TX packets 17542  bytes 3635821 (3.6 MB)        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0veth1949410: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500        inet6 fe80::40e1:3bff:fe85:103b  prefixlen 64  scopeid 0x20<link>        ether 42:e1:3b:85:10:3b  txqueuelen 0  (以太网)        RX packets 0  bytes 0 (0.0 B)        RX errors 0  dropped 0  overruns 0  frame 0        TX packets 2695  bytes 544059 (544.0 KB)        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0veth4740537: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500        inet6 fe80::bcd4:77ff:feb9:475d  prefixlen 64  scopeid 0x20<link>        ether be:d4:77:b9:47:5d  txqueuelen 0  (以太网)        RX packets 0  bytes 0 (0.0 B)        RX errors 0  dropped 0  overruns 0  frame 0        TX packets 17530  bytes 3633925 (3.6 MB)        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0veth0bbc27b: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500        inet6 fe80::ac33:d1ff:fed3:a869  prefixlen 64  scopeid 0x20<link>        ether ae:33:d1:d3:a8:69  txqueuelen 0  (以太网)        RX packets 476  bytes 35020 (35.0 KB)        RX errors 0  dropped 0  overruns 0  frame 0        TX packets 227969  bytes 48467535 (48.4 MB)        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0veth11e79de: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500        inet6 fe80::e098:9dff:fe02:92b9  prefixlen 64  scopeid 0x20<link>        ether e2:98:9d:02:92:b9  txqueuelen 0  (以太网)        RX packets 3058  bytes 6210690 (6.2 MB)        RX errors 0  dropped 0  overruns 0  frame 0        TX packets 4834  bytes 923006 (923.0 KB)        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0veth15e9a85: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500        inet6 fe80::dccd:efff:fe36:f57c  prefixlen 64  scopeid 0x20<link>        ether de:cd:ef:36:f5:7c  txqueuelen 0  (以太网)        RX packets 1344  bytes 2335263 (2.3 MB)        RX errors 0  dropped 0  overruns 0  frame 0        TX packets 7853  bytes 1606619 (1.6 MB)        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0veth1b39bc2: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500        inet6 fe80::d899:c9ff:fe63:32f2  prefixlen 64  scopeid 0x20<link>        ether da:99:c9:63:32:f2  txqueuelen 0  (以太网)        RX packets 0  bytes 0 (0.0 B)        RX errors 0  dropped 0  overruns 0  frame 0        TX packets 200506  bytes 38712220 (38.7 MB)        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0veth25c9c56: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500        inet6 fe80::944e:c3ff:fe86:1b09  prefixlen 64  scopeid 0x20<link>        ether 96:4e:c3:86:1b:09  txqueuelen 0  (以太网)        RX packets 0  bytes 0 (0.0 B)        RX errors 0  dropped 0  overruns 0  frame 0        TX packets 17541  bytes 3635751 (3.6 MB)        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0veth4008bb0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500        inet6 fe80::f8b0:ccff:fe02:f34e  prefixlen 64  scopeid 0x20<link>        ether fa:b0:cc:02:f3:4e  txqueuelen 0  (以太网)        RX packets 0  bytes 0 (0.0 B)        RX errors 0  dropped 0  overruns 0  frame 0        TX packets 228524  bytes 47584406 (47.5 MB)        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0veth54a06b9: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500        inet6 fe80::70ce:26ff:feda:bb9b  prefixlen 64  scopeid 0x20<link>        ether 72:ce:26:da:bb:9b  txqueuelen 0  (以太网)        RX packets 1242  bytes 964315 (964.3 KB)        RX errors 0  dropped 0  overruns 0  frame 0        TX packets 3486  bytes 655161 (655.1 KB)        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0veth59d105f: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500        inet6 fe80::b0e1:dcff:fe0a:4a9b  prefixlen 64  scopeid 0x20<link>        ether b2:e1:dc:0a:4a:9b  txqueuelen 0  (以太网)        RX packets 6075235  bytes 60138832887 (60.1 GB)        RX errors 0  dropped 0  overruns 0  frame 0        TX packets 4730465  bytes 1035799272 (1.0 GB)        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0veth74fecbf: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500        inet6 fe80::2052:65ff:fee2:9e45  prefixlen 64  scopeid 0x20<link>        ether 22:52:65:e2:9e:45  txqueuelen 0  (以太网)        RX packets 0  bytes 0 (0.0 B)        RX errors 0  dropped 0  overruns 0  frame 0        TX packets 10863  bytes 2066312 (2.0 MB)        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0veth86a0d95: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500        inet6 fe80::8c2d:94ff:fe24:99d1  prefixlen 64  scopeid 0x20<link>        ether 8e:2d:94:24:99:d1  txqueuelen 0  (以太网)        RX packets 101  bytes 5382 (5.3 KB)        RX errors 0  dropped 0  overruns 0  frame 0        TX packets 65026  bytes 10541253 (10.5 MB)        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0veth8b5435c: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500        inet6 fe80::4c38:29ff:fe42:d3bf  prefixlen 64  scopeid 0x20<link>        ether 4e:38:29:42:d3:bf  txqueuelen 0  (以太网)        RX packets 0  bytes 0 (0.0 B)        RX errors 0  dropped 0  overruns 0  frame 0        TX packets 17531  bytes 3633995 (3.6 MB)        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0vetha335dcc: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500        inet6 fe80::c402:9cff:fe4f:932b  prefixlen 64  scopeid 0x20<link>        ether c6:02:9c:4f:93:2b  txqueuelen 0  (以太网)        RX packets 531  bytes 890232 (890.2 KB)        RX errors 0  dropped 0  overruns 0  frame 0        TX packets 3097  bytes 620751 (620.7 KB)        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0vethb2c054c: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500        inet6 fe80::d08c:46ff:feea:b143  prefixlen 64  scopeid 0x20<link>        ether d2:8c:46:ea:b1:43  txqueuelen 0  (以太网)        RX packets 0  bytes 0 (0.0 B)        RX errors 0  dropped 0  overruns 0  frame 0        TX packets 17539  bytes 3635611 (3.6 MB)        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0vethc1539e4: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500        inet6 fe80::14f9:77ff:fe9e:1ec5  prefixlen 64  scopeid 0x20<link>        ether 16:f9:77:9e:1e:c5  txqueuelen 0  (以太网)        RX packets 0  bytes 0 (0.0 B)        RX errors 0  dropped 0  overruns 0  frame 0        TX packets 2694  bytes 543989 (543.9 KB)        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0vethde51bd6: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500        inet6 fe80::f8ea:2bff:fe4f:f97f  prefixlen 64  scopeid 0x20<link>        ether fa:ea:2b:4f:f9:7f  txqueuelen 0  (以太网)        RX packets 12  bytes 624 (624.0 B)        RX errors 0  dropped 0  overruns 0  frame 0        TX packets 2712  bytes 545494 (545.4 KB)        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0vethef0b9a6: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500        inet6 fe80::ec32:5aff:fe62:a48c  prefixlen 64  scopeid 0x20<link>        ether ee:32:5a:62:a4:8c  txqueuelen 0  (以太网)        RX packets 0  bytes 0 (0.0 B)        RX errors 0  dropped 0  overruns 0  frame 0        TX packets 17541  bytes 3635751 (3.6 MB)        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0vethf2e5b49: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500        inet6 fe80::d448:6aff:fe7d:2768  prefixlen 64  scopeid 0x20<link>        ether d6:48:6a:7d:27:68  txqueuelen 0  (以太网)        RX packets 196771  bytes 71218452 (71.2 MB)        RX errors 0  dropped 0  overruns 0  frame 0        TX packets 447459  bytes 392629793 (392.6 MB)        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+2024-01-22 17:13:04.244  INFO 3156807 --- [nio-8022-exec-1] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:ip addr
+2024-01-22 17:13:04.569  INFO 3156807 --- [nio-8022-exec-1] com.jhh.rossystem.utils.ChannelUtil      :  result:1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00    inet 127.0.0.1/8 scope host lo       valid_lft forever preferred_lft forever    inet6 ::1/128 scope host        valid_lft forever preferred_lft forever2: enp216s0f0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc mq state DOWN group default qlen 1000    link/ether a0:36:9f:a4:37:66 brd ff:ff:ff:ff:ff:ff3: enp216s0f1: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000    link/ether a0:36:9f:a4:37:67 brd ff:ff:ff:ff:ff:ff    inet 115.25.41.98/24 brd 115.25.41.255 scope global dynamic noprefixroute enp216s0f1       valid_lft 5741sec preferred_lft 5741sec    inet6 2001:da8:208:23e::bf1:9b55/128 scope global dynamic noprefixroute        valid_lft 7555sec preferred_lft 2061sec    inet6 fe80::76d8:d385:ff58:c31f/64 scope link noprefixroute        valid_lft forever preferred_lft forever4: eno1: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc mq state DOWN group default qlen 1000    link/ether 3c:ec:ef:b1:a2:96 brd ff:ff:ff:ff:ff:ff    altname enp1s0f05: eno2: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc mq state DOWN group default qlen 1000    link/ether 3c:ec:ef:b1:a2:97 brd ff:ff:ff:ff:ff:ff    altname enp1s0f16: docker_gwbridge: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default     link/ether 02:42:1c:de:49:6f brd ff:ff:ff:ff:ff:ff    inet 172.18.0.1/16 brd 172.18.255.255 scope global docker_gwbridge       valid_lft forever preferred_lft forever    inet6 fe80::42:1cff:fede:496f/64 scope link        valid_lft forever preferred_lft forever7: docker0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default     link/ether 02:42:c0:96:f8:68 brd ff:ff:ff:ff:ff:ff    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0       valid_lft forever preferred_lft forever    inet6 fe80::42:c0ff:fe96:f868/64 scope link        valid_lft forever preferred_lft forever8: br-fadef6d167de: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default     link/ether 02:42:8e:31:56:e8 brd ff:ff:ff:ff:ff:ff    inet 172.21.0.1/16 brd 172.21.255.255 scope global br-fadef6d167de       valid_lft forever preferred_lft forever13: veth4008bb0@if12: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker_gwbridge state UP group default     link/ether fa:b0:cc:02:f3:4e brd ff:ff:ff:ff:ff:ff link-netnsid 1    inet6 fe80::f8b0:ccff:fe02:f34e/64 scope link        valid_lft forever preferred_lft forever15: vethf2e5b49@if14: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default     link/ether d6:48:6a:7d:27:68 brd ff:ff:ff:ff:ff:ff link-netnsid 2    inet6 fe80::d448:6aff:fe7d:2768/64 scope link        valid_lft forever preferred_lft forever451099: veth1b39bc2@if451098: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default     link/ether da:99:c9:63:32:f2 brd ff:ff:ff:ff:ff:ff link-netnsid 13    inet6 fe80::d899:c9ff:fe63:32f2/64 scope link        valid_lft forever preferred_lft forever453473: veth25c9c56@if453472: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker_gwbridge state UP group default     link/ether 96:4e:c3:86:1b:09 brd ff:ff:ff:ff:ff:ff link-netnsid 6    inet6 fe80::944e:c3ff:fe86:1b09/64 scope link        valid_lft forever preferred_lft forever453483: vethb2c054c@if453482: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker_gwbridge state UP group default     link/ether d2:8c:46:ea:b1:43 brd ff:ff:ff:ff:ff:ff link-netnsid 8    inet6 fe80::d08c:46ff:feea:b143/64 scope link        valid_lft forever preferred_lft forever453485: vethef0b9a6@if453484: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker_gwbridge state UP group default     link/ether ee:32:5a:62:a4:8c brd ff:ff:ff:ff:ff:ff link-netnsid 7    inet6 fe80::ec32:5aff:fe62:a48c/64 scope link        valid_lft forever preferred_lft forever112: veth0bbc27b@if111: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker_gwbridge state UP group default     link/ether ae:33:d1:d3:a8:69 brd ff:ff:ff:ff:ff:ff link-netnsid 21    inet6 fe80::ac33:d1ff:fed3:a869/64 scope link        valid_lft forever preferred_lft forever453489: veth1099539@if453488: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker_gwbridge state UP group default     link/ether 62:c2:c7:3c:cc:4a brd ff:ff:ff:ff:ff:ff link-netnsid 9    inet6 fe80::60c2:c7ff:fe3c:cc4a/64 scope link        valid_lft forever preferred_lft forever453240: veth59d105f@if453239: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default     link/ether b2:e1:dc:0a:4a:9b brd ff:ff:ff:ff:ff:ff link-netnsid 15    inet6 fe80::b0e1:dcff:fe0a:4a9b/64 scope link        valid_lft forever preferred_lft forever453497: veth4740537@if453496: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker_gwbridge state UP group default     link/ether be:d4:77:b9:47:5d brd ff:ff:ff:ff:ff:ff link-netnsid 10    inet6 fe80::bcd4:77ff:feb9:475d/64 scope link        valid_lft forever preferred_lft forever453499: veth8b5435c@if453498: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker_gwbridge state UP group default     link/ether 4e:38:29:42:d3:bf brd ff:ff:ff:ff:ff:ff link-netnsid 11    inet6 fe80::4c38:29ff:fe42:d3bf/64 scope link        valid_lft forever preferred_lft forever453503: veth74fecbf@if453502: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default     link/ether 22:52:65:e2:9e:45 brd ff:ff:ff:ff:ff:ff link-netnsid 12    inet6 fe80::2052:65ff:fee2:9e45/64 scope link        valid_lft forever preferred_lft forever453250: veth86a0d95@if453249: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default     link/ether 8e:2d:94:24:99:d1 brd ff:ff:ff:ff:ff:ff link-netnsid 26    inet6 fe80::8c2d:94ff:fe24:99d1/64 scope link        valid_lft forever preferred_lft forever453521: veth15e9a85@if453520: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default     link/ether de:cd:ef:36:f5:7c brd ff:ff:ff:ff:ff:ff link-netnsid 14    inet6 fe80::dccd:efff:fe36:f57c/64 scope link        valid_lft forever preferred_lft forever453527: vethde51bd6@if453526: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default     link/ether fa:ea:2b:4f:f9:7f brd ff:ff:ff:ff:ff:ff link-netnsid 3    inet6 fe80::f8ea:2bff:fe4f:f97f/64 scope link        valid_lft forever preferred_lft forever453529: vetha335dcc@if453528: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default     link/ether c6:02:9c:4f:93:2b brd ff:ff:ff:ff:ff:ff link-netnsid 16    inet6 fe80::c402:9cff:fe4f:932b/64 scope link        valid_lft forever preferred_lft forever453533: veth1949410@if453532: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default     link/ether 42:e1:3b:85:10:3b brd ff:ff:ff:ff:ff:ff link-netnsid 17    inet6 fe80::40e1:3bff:fe85:103b/64 scope link        valid_lft forever preferred_lft forever453535: vethc1539e4@if453534: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default     link/ether 16:f9:77:9e:1e:c5 brd ff:ff:ff:ff:ff:ff link-netnsid 18    inet6 fe80::14f9:77ff:fe9e:1ec5/64 scope link        valid_lft forever preferred_lft forever453541: veth54a06b9@if453540: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default     link/ether 72:ce:26:da:bb:9b brd ff:ff:ff:ff:ff:ff link-netnsid 19    inet6 fe80::70ce:26ff:feda:bb9b/64 scope link        valid_lft forever preferred_lft forever453543: veth11e79de@if453542: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default     link/ether e2:98:9d:02:92:b9 brd ff:ff:ff:ff:ff:ff link-netnsid 20    inet6 fe80::e098:9dff:fe02:92b9/64 scope link        valid_lft forever preferred_lft forever
+2024-01-22 17:15:14.552  INFO 3156807 --- [nio-8022-exec-2] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:ip addr show | grep -o -E '([0-9a-fA-F]{2}:){5}([0-9a-fA-F]{2})'
+2024-01-22 17:15:14.888  INFO 3156807 --- [nio-8022-exec-2] com.jhh.rossystem.utils.ChannelUtil      :  result:00:00:00:00:00:0000:00:00:00:00:00a0:36:9f:a4:37:66ff:ff:ff:ff:ff:ffa0:36:9f:a4:37:67ff:ff:ff:ff:ff:ff3c:ec:ef:b1:a2:96ff:ff:ff:ff:ff:ff3c:ec:ef:b1:a2:97ff:ff:ff:ff:ff:ff02:42:1c:de:49:6fff:ff:ff:ff:ff:ff02:42:c0:96:f8:68ff:ff:ff:ff:ff:ff02:42:8e:31:56:e8ff:ff:ff:ff:ff:fffa:b0:cc:02:f3:4eff:ff:ff:ff:ff:ffd6:48:6a:7d:27:68ff:ff:ff:ff:ff:ffda:99:c9:63:32:f2ff:ff:ff:ff:ff:ff96:4e:c3:86:1b:09ff:ff:ff:ff:ff:ffd2:8c:46:ea:b1:43ff:ff:ff:ff:ff:ffee:32:5a:62:a4:8cff:ff:ff:ff:ff:ffae:33:d1:d3:a8:69ff:ff:ff:ff:ff:ff62:c2:c7:3c:cc:4aff:ff:ff:ff:ff:ffb2:e1:dc:0a:4a:9bff:ff:ff:ff:ff:ffbe:d4:77:b9:47:5dff:ff:ff:ff:ff:ff4e:38:29:42:d3:bfff:ff:ff:ff:ff:ff22:52:65:e2:9e:45ff:ff:ff:ff:ff:ff8e:2d:94:24:99:d1ff:ff:ff:ff:ff:ffde:cd:ef:36:f5:7cff:ff:ff:ff:ff:fffa:ea:2b:4f:f9:7fff:ff:ff:ff:ff:ffc6:02:9c:4f:93:2bff:ff:ff:ff:ff:ff42:e1:3b:85:10:3bff:ff:ff:ff:ff:ff16:f9:77:9e:1e:c5ff:ff:ff:ff:ff:ff72:ce:26:da:bb:9bff:ff:ff:ff:ff:ffe2:98:9d:02:92:b9ff:ff:ff:ff:ff:ff
+2024-01-22 18:51:08.016  INFO 3156807 --- [nio-8022-exec-4] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:sleep 5
+2024-01-22 18:51:13.325  INFO 3156807 --- [nio-8022-exec-4] com.jhh.rossystem.utils.ChannelUtil      :  result:
+2024-01-22 18:52:18.625  INFO 3156807 --- [nio-8022-exec-5] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:apt update
+2024-01-22 18:52:19.000  INFO 3156807 --- [nio-8022-exec-5] com.jhh.rossystem.utils.ChannelUtil      :  result:正在读取软件包列表... 0%正在读取软件包列表... 100%正在读取软件包列表... 完成[1;31mE: [0m无法打开锁文件 /var/lib/apt/lists/lock - open (13: 权限不够)[0m[1;31mE: [0m无法对目录 /var/lib/apt/lists/ 加锁[0m[1;33mW: [0m用 unlink 删除文件 /var/cache/apt/pkgcache.bin 出错 - RemoveCaches (13: 权限不够)[0m[1;33mW: [0m用 unlink 删除文件 /var/cache/apt/srcpkgcache.bin 出错 - RemoveCaches (13: 权限不够)[0m
+2024-01-22 18:52:29.315  INFO 3156807 --- [nio-8022-exec-6] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:sudo apt update
+2024-01-23 10:02:53.737  INFO 3156807 --- [nio-8022-exec-5] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:ps
+2024-01-23 10:02:54.104  INFO 3156807 --- [nio-8022-exec-5] com.jhh.rossystem.utils.ChannelUtil      :  result:    PID TTY          TIME CMD 147509 pts/12   00:00:00 ps
+2024-01-23 10:07:00.342  INFO 3156807 --- [nio-8022-exec-7] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:dir
+2024-01-23 10:07:00.641  INFO 3156807 --- [nio-8022-exec-7] com.jhh.rossystem.utils.ChannelUtil      :  result:anaconda3			  Downloads  nohup.out	ros_ws	     test_py.pycuda_12.2.2_535.104.05_linux.run  geth-ros   Pictures	snap	     test.shDesktop				  java	     Public	Templates    VideosDocuments			  Music      ros-web	test_eth.py
+2024-01-23 10:07:08.439  INFO 3156807 --- [nio-8022-exec-8] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:pwd
+2024-01-23 10:07:08.738  INFO 3156807 --- [nio-8022-exec-8] com.jhh.rossystem.utils.ChannelUtil      :  result:/home/micl
+2024-01-23 10:07:23.579  INFO 3156807 --- [io-8022-exec-10] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:sudo
+2024-01-23 10:07:23.884  INFO 3156807 --- [io-8022-exec-10] com.jhh.rossystem.utils.ChannelUtil      :  result:usage: sudo -h | -K | -k | -Vusage: sudo -v [-AknS] [-g group] [-h host] [-p prompt] [-u user]usage: sudo -l [-AknS] [-g group] [-h host] [-p prompt] [-U user] [-u user]            [command]usage: sudo [-AbEHknPS] [-r role] [-t type] [-C num] [-g group] [-h host] [-p            prompt] [-T timeout] [-u user] [VAR=value] [-i|-s] [<command>]usage: sudo -e [-AknS] [-r role] [-t type] [-C num] [-g group] [-h host] [-p            prompt] [-T timeout] [-u user] file ...
+2024-01-23 10:07:33.774  INFO 3156807 --- [nio-8022-exec-9] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:pwd
+2024-01-23 10:07:34.082  INFO 3156807 --- [nio-8022-exec-9] com.jhh.rossystem.utils.ChannelUtil      :  result:/home/micl
+2024-01-23 10:07:39.376  INFO 3156807 --- [nio-8022-exec-1] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:dir
+2024-01-23 10:07:39.685  INFO 3156807 --- [nio-8022-exec-1] com.jhh.rossystem.utils.ChannelUtil      :  result:anaconda3			  Downloads  nohup.out	ros_ws	     test_py.pycuda_12.2.2_535.104.05_linux.run  geth-ros   Pictures	snap	     test.shDesktop				  java	     Public	Templates    VideosDocuments			  Music      ros-web	test_eth.py
+2024-01-23 11:29:24.513  INFO 3156807 --- [nio-8022-exec-9] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:docker rm lucid_sutherland
+2024-01-23 11:29:24.874  INFO 3156807 --- [nio-8022-exec-9] com.jhh.rossystem.utils.ChannelUtil      :  result:Error response from daemon: You cannot remove a running container 35fe4b0a2da59536adf5cf254406f490f3a742caf23570440679f6b812f1cf0a. Stop the container before attempting removal or force remove
+2024-01-23 11:29:29.081  INFO 3156807 --- [nio-8022-exec-2] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:docker rm funny_newton
+2024-01-23 11:29:29.383  INFO 3156807 --- [nio-8022-exec-2] com.jhh.rossystem.utils.ChannelUtil      :  result:Error response from daemon: You cannot remove a running container 85ddd7a77f525e8ee7999a71c0cd99794ba45e93678295c6cba9e4571a54bf2c. Stop the container before attempting removal or force remove
+2024-01-23 11:30:19.531  INFO 3156807 --- [nio-8022-exec-9] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:ls
+2024-01-23 11:30:19.820  INFO 3156807 --- [nio-8022-exec-9] com.jhh.rossystem.utils.ChannelUtil      :  result:anaconda3			  Downloads  nohup.out	ros_ws	     test_py.pycuda_12.2.2_535.104.05_linux.run  geth-ros   Pictures	snap	     test.shDesktop				  java	     Public	Templates    VideosDocuments			  Music      ros-web	test_eth.py
+2024-01-23 11:30:41.911  INFO 3156807 --- [nio-8022-exec-1] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:cd java
+2024-01-23 11:30:42.206  INFO 3156807 --- [nio-8022-exec-1] com.jhh.rossystem.utils.ChannelUtil      :  result:
+2024-01-23 11:30:47.335  INFO 3156807 --- [nio-8022-exec-2] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:ls
+2024-01-23 11:30:47.636  INFO 3156807 --- [nio-8022-exec-2] com.jhh.rossystem.utils.ChannelUtil      :  result:anaconda3			  Downloads  nohup.out	ros_ws	     test_py.pycuda_12.2.2_535.104.05_linux.run  geth-ros   Pictures	snap	     test.shDesktop				  java	     Public	Templates    VideosDocuments			  Music      ros-web	test_eth.py
+2024-01-23 11:31:04.690  INFO 3156807 --- [nio-8022-exec-3] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:cd java;ls
+2024-01-23 11:31:04.982  INFO 3156807 --- [nio-8022-exec-3] com.jhh.rossystem.utils.ChannelUtil      :  result:jdk-17.0.9  jdk-17_linux-x64_bin.tar.gz  maven
+2024-01-24 05:01:52.599  INFO 3156807 --- [nio-8022-exec-8] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x020x000x010x000x010xfc0x030x030x1a50xdaU0xa40xae0x00R$0x98O0x0b0xa9=0xf10xb90x85}0x19.!n0x9d0xe80x0dJ"f0x0eB0xdb0xdd0x000x000x840xc000xc0,0xc0(0xc0$0xc00x140xc00x0a0xc0"0xc0!0x000xa30x000x9f0x00k0x00j0x0090x0080x000x880x000x870xc020xc0.0xc0*0xc0&0xc00x0f0xc00x050x000x9d0x00=0x0050x000x840xc00x120xc00x080xc00x1c0xc00x1b0x000x160x000x130xc00x0d0xc00x030x000x0a0xc0/0xc0+0xc0'0xc0#0xc00x130xc00x090xc00x1f0xc00x1e0x000xa20x000x9e0x00g0x00@0x0030x0020x000x9a0x000x990x00E0x00D0xc010xc0-0xc0)0xc0%0xc00x0e0xc00x040x000x9c0x00<0x00/0x000x960x00A0x000x070x000xff0x010x000x01O0x000x0b0x000x040x030x000x010x020x000x0a0x0040x0020x000x0e0x000x0d0x000x190x000x0b0x000x0c0x000x180x000x090x000x0a0x000x160x000x170x000x080x000x060x000x070x000x140x000x150x000x040x000x050x000x120x000x130x000x010x000x020x000x030x000x0f0x000x100x000x110x000x0d0x00 ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:419) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:271) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+
+2024-01-24 16:46:36.513  INFO 3156807 --- [nio-8022-exec-5] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:docker pull 
+2024-01-24 16:46:36.873  INFO 3156807 --- [nio-8022-exec-5] com.jhh.rossystem.utils.ChannelUtil      :  result:"docker pull" requires exactly 1 argument.See 'docker pull --help'.Usage:  docker pull [OPTIONS] NAME[:TAG|@DIGEST]Download an image from a registry
+2024-01-24 16:47:21.133  INFO 3156807 --- [nio-8022-exec-9] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:docker start test
+2024-01-24 16:47:21.486  INFO 3156807 --- [nio-8022-exec-9] com.jhh.rossystem.utils.ChannelUtil      :  result:test
+2024-01-24 16:47:27.115  INFO 3156807 --- [nio-8022-exec-2] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:docker start test
+2024-01-24 16:47:27.461  INFO 3156807 --- [nio-8022-exec-2] com.jhh.rossystem.utils.ChannelUtil      :  result:test
+2024-01-24 16:47:36.773  INFO 3156807 --- [nio-8022-exec-4] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:docker start test
+2024-01-24 16:47:37.121  INFO 3156807 --- [nio-8022-exec-4] com.jhh.rossystem.utils.ChannelUtil      :  result:test
+2024-01-25 05:02:42.266  INFO 3156807 --- [nio-8022-exec-9] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x020x000x010x000x010xfc0x030x03]'0xe9HfG0xe90xbe0x1a0xb5Z0xb7`0xa30xbd0xdb0x9azD0xff0x830x89hLW6W{{0x180xc3-0x000x000x840xc000xc0,0xc0(0xc0$0xc00x140xc00x0a0xc0"0xc0!0x000xa30x000x9f0x00k0x00j0x0090x0080x000x880x000x870xc020xc0.0xc0*0xc0&0xc00x0f0xc00x050x000x9d0x00=0x0050x000x840xc00x120xc00x080xc00x1c0xc00x1b0x000x160x000x130xc00x0d0xc00x030x000x0a0xc0/0xc0+0xc0'0xc0#0xc00x130xc00x090xc00x1f0xc00x1e0x000xa20x000x9e0x00g0x00@0x0030x0020x000x9a0x000x990x00E0x00D0xc010xc0-0xc0)0xc0%0xc00x0e0xc00x040x000x9c0x00<0x00/0x000x960x00A0x000x070x000xff0x010x000x01O0x000x0b0x000x040x030x000x010x020x000x0a0x0040x0020x000x0e0x000x0d0x000x190x000x0b0x000x0c0x000x180x000x090x000x0a0x000x160x000x170x000x080x000x060x000x070x000x140x000x150x000x040x000x050x000x120x000x130x000x010x000x020x000x030x000x0f0x000x100x000x110x000x0d0x00 ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:419) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:271) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+
+2024-01-26 11:29:17.659  INFO 3156807 --- [io-8022-exec-10] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:ls
+2024-01-26 11:29:17.961  INFO 3156807 --- [io-8022-exec-10] com.jhh.rossystem.utils.ChannelUtil      :  result:anaconda3			  java	     STAR_ustb_edu_cn_integrated.crtcuda_12.2.2_535.104.05_linux.run  Music      STAR_ustb_edu_cn.keyDesktop				  nohup.out  TemplatesDocuments			  Pictures   test_eth.pyDownloads			  Public     test_py.pyeth-docker			  ros-web    test.shethereum-docker			  ros_ws     Videosgeth-ros			  snap
+2024-01-26 11:29:22.342  INFO 3156807 --- [nio-8022-exec-1] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:ps
+2024-01-26 11:29:22.722  INFO 3156807 --- [nio-8022-exec-1] com.jhh.rossystem.utils.ChannelUtil      :  result:    PID TTY          TIME CMD1505397 pts/19   00:00:00 ps
+2024-01-26 11:29:45.121  INFO 3156807 --- [nio-8022-exec-3] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:docker ps |grep ethereum
+2024-01-26 11:29:45.448  INFO 3156807 --- [nio-8022-exec-3] com.jhh.rossystem.utils.ChannelUtil      :  result:a7a74f0a7987   myros:latest                         "/ros_entrypoint.sh …"   12 days ago    Up 12 days                                                                                                 ethereum_ros.2.p5ymdv1o5nvtmgt0e8mgquggs0804a423e52d   myros:latest                         "/ros_entrypoint.sh …"   12 days ago    Up 12 days                                                                                                 ethereum_ros.3.6tnbktdzfhq84ne5mm9z3mwqsfc4d5245c433   mygeth:latest                        "/root/start.sh --da…"   12 days ago    Up 12 days              4000/tcp, 8545-8547/tcp, 9800-9899/tcp, 30303/tcp, 30303/udp                       ethereum_eth.3.uc1upcw5iqobv78c379tplt43321a5f874eea   myros:latest                         "/ros_entrypoint.sh …"   12 days ago    Up 12 days                                                                                                 ethereum_ros.1.xquqtghrnr68xa2rc24ywbcpabcbdccbe6547   mygeth:latest                        "/root/start.sh --da…"   12 days ago    Up 12 days              4000/tcp, 8545-8547/tcp, 9800-9899/tcp, 30303/tcp, 30303/udp                       ethereum_eth.2.5orrh7jupilmtvp8sm27isssidd42e87bb329   mygeth:latest                        "/root/start.sh --da…"   12 days ago    Up 12 days              4000/tcp, 8545-8547/tcp, 9800-9899/tcp, 30303/tcp, 30303/udp                       ethereum_eth.1.bhuxgcc5qmtkj56rw2up3b234
+2024-01-26 11:31:15.953  INFO 3156807 --- [nio-8022-exec-5] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:cd geth-ros && ls
+2024-01-26 11:31:16.244  INFO 3156807 --- [nio-8022-exec-5] com.jhh.rossystem.utils.ChannelUtil      :  result:argos-blockchain-sm  MyGeth  README.md	scripts
+2024-01-26 11:38:00.255  INFO 3156807 --- [nio-8022-exec-8] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:ls
+2024-01-26 11:38:00.533  INFO 3156807 --- [nio-8022-exec-8] com.jhh.rossystem.utils.ChannelUtil      :  result:anaconda3			  java	     STAR_ustb_edu_cn_integrated.crtcuda_12.2.2_535.104.05_linux.run  Music      STAR_ustb_edu_cn.keyDesktop				  nohup.out  TemplatesDocuments			  Pictures   test_eth.pyDownloads			  Public     test_py.pyeth-docker			  ros-web    test.shethereum-docker			  ros_ws     Videosgeth-ros			  snap
+2024-01-27 05:12:00.009  INFO 3156807 --- [nio-8022-exec-4] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x020x000x010x000x010xfc0x030x030xe2V{0x140xd00xe30xc40xfa,0xc70xa9y0x980xe70x820xce0xad0x170xea0xc1$0x950xa80x16[0x87C0xc40xd5@0xf10x990x000x000x840xc000xc0,0xc0(0xc0$0xc00x140xc00x0a0xc0"0xc0!0x000xa30x000x9f0x00k0x00j0x0090x0080x000x880x000x870xc020xc0.0xc0*0xc0&0xc00x0f0xc00x050x000x9d0x00=0x0050x000x840xc00x120xc00x080xc00x1c0xc00x1b0x000x160x000x130xc00x0d0xc00x030x000x0a0xc0/0xc0+0xc0'0xc0#0xc00x130xc00x090xc00x1f0xc00x1e0x000xa20x000x9e0x00g0x00@0x0030x0020x000x9a0x000x990x00E0x00D0xc010xc0-0xc0)0xc0%0xc00x0e0xc00x040x000x9c0x00<0x00/0x000x960x00A0x000x070x000xff0x010x000x01O0x000x0b0x000x040x030x000x010x020x000x0a0x0040x0020x000x0e0x000x0d0x000x190x000x0b0x000x0c0x000x180x000x090x000x0a0x000x160x000x170x000x080x000x060x000x070x000x140x000x150x000x040x000x050x000x120x000x130x000x010x000x020x000x030x000x0f0x000x100x000x110x000x0d0x00 ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:419) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:271) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+
+2024-01-28 05:21:12.198  INFO 3156807 --- [nio-8022-exec-8] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x020x000x010x000x010xfc0x030x030xc3Y0xf2`v0xef0x9dl0xed40xb80x1bhS0x990xd4uaT9w0x0a0xfb.0xee0xcd0x110xcc0xb1t0x02F0x000x000x840xc000xc0,0xc0(0xc0$0xc00x140xc00x0a0xc0"0xc0!0x000xa30x000x9f0x00k0x00j0x0090x0080x000x880x000x870xc020xc0.0xc0*0xc0&0xc00x0f0xc00x050x000x9d0x00=0x0050x000x840xc00x120xc00x080xc00x1c0xc00x1b0x000x160x000x130xc00x0d0xc00x030x000x0a0xc0/0xc0+0xc0'0xc0#0xc00x130xc00x090xc00x1f0xc00x1e0x000xa20x000x9e0x00g0x00@0x0030x0020x000x9a0x000x990x00E0x00D0xc010xc0-0xc0)0xc0%0xc00x0e0xc00x040x000x9c0x00<0x00/0x000x960x00A0x000x070x000xff0x010x000x01O0x000x0b0x000x040x030x000x010x020x000x0a0x0040x0020x000x0e0x000x0d0x000x190x000x0b0x000x0c0x000x180x000x090x000x0a0x000x160x000x170x000x080x000x060x000x070x000x140x000x150x000x040x000x050x000x120x000x130x000x010x000x020x000x030x000x0f0x000x100x000x110x000x0d0x00 ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:419) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:271) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+
+2024-01-30 04:55:27.292  INFO 3156807 --- [nio-8022-exec-4] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x020x000x010x000x010xfc0x030x030xef[0x0b<0xfa0xfb00x97#0xa8U0x1e ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:419) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:271) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+
+2024-01-31 04:57:54.080  INFO 3156807 --- [nio-8022-exec-8] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x020x000x010x000x010xfc0x030x030x840x16h7C0xd0I"0xff0x17ZN0x0er}nJ0xa00xcfP0x0c0xf4C0x950x0f0x080xdee-t0xb90x860x000x000x840xc000xc0,0xc0(0xc0$0xc00x140xc00x0a0xc0"0xc0!0x000xa30x000x9f0x00k0x00j0x0090x0080x000x880x000x870xc020xc0.0xc0*0xc0&0xc00x0f0xc00x050x000x9d0x00=0x0050x000x840xc00x120xc00x080xc00x1c0xc00x1b0x000x160x000x130xc00x0d0xc00x030x000x0a0xc0/0xc0+0xc0'0xc0#0xc00x130xc00x090xc00x1f0xc00x1e0x000xa20x000x9e0x00g0x00@0x0030x0020x000x9a0x000x990x00E0x00D0xc010xc0-0xc0)0xc0%0xc00x0e0xc00x040x000x9c0x00<0x00/0x000x960x00A0x000x070x000xff0x010x000x01O0x000x0b0x000x040x030x000x010x020x000x0a0x0040x0020x000x0e0x000x0d0x000x190x000x0b0x000x0c0x000x180x000x090x000x0a0x000x160x000x170x000x080x000x060x000x070x000x140x000x150x000x040x000x050x000x120x000x130x000x010x000x020x000x030x000x0f0x000x100x000x110x000x0d0x00 ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:419) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:271) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+
+2024-02-01 04:48:42.840  INFO 3156807 --- [nio-8022-exec-1] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x020x000x010x000x010xfc0x030x03([0x850xde0xa90x0e+\n0x85Y0xf7"%0xccp0xb1O0xca0xd50xdb0xa7A ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:419) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:271) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+
+2024-02-01 16:53:19.552  INFO 3156807 --- [nio-8022-exec-4] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:docker start testcon
+2024-02-01 16:53:20.207  INFO 3156807 --- [nio-8022-exec-4] com.jhh.rossystem.utils.ChannelUtil      :  result:testcon
+2024-02-01 16:53:27.082  INFO 3156807 --- [nio-8022-exec-7] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:docker start anewcontainer
+2024-02-01 16:53:27.447  INFO 3156807 --- [nio-8022-exec-7] com.jhh.rossystem.utils.ChannelUtil      :  result:anewcontainer
+2024-02-02 04:53:15.738  INFO 3156807 --- [nio-8022-exec-9] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x020x000x010x000x010xfc0x030x03t0x95720xc50xfe0xc4.)0xe7{C0xd8{0xad0xaf0xcb0xd10x90*]0xa80xe7cmQ0x98$0xa3z0xa50x8c0x000x000x840xc000xc0,0xc0(0xc0$0xc00x140xc00x0a0xc0"0xc0!0x000xa30x000x9f0x00k0x00j0x0090x0080x000x880x000x870xc020xc0.0xc0*0xc0&0xc00x0f0xc00x050x000x9d0x00=0x0050x000x840xc00x120xc00x080xc00x1c0xc00x1b0x000x160x000x130xc00x0d0xc00x030x000x0a0xc0/0xc0+0xc0'0xc0#0xc00x130xc00x090xc00x1f0xc00x1e0x000xa20x000x9e0x00g0x00@0x0030x0020x000x9a0x000x990x00E0x00D0xc010xc0-0xc0)0xc0%0xc00x0e0xc00x040x000x9c0x00<0x00/0x000x960x00A0x000x070x000xff0x010x000x01O0x000x0b0x000x040x030x000x010x020x000x0a0x0040x0020x000x0e0x000x0d0x000x190x000x0b0x000x0c0x000x180x000x090x000x0a0x000x160x000x170x000x080x000x060x000x070x000x140x000x150x000x040x000x050x000x120x000x130x000x010x000x020x000x030x000x0f0x000x100x000x110x000x0d0x00 ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:419) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:271) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+
+2024-02-03 05:01:57.759  INFO 3156807 --- [nio-8022-exec-3] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x020x000x010x000x010xfc0x030x030xab0x870xfa0x100x01+0x93/(hU ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:419) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:271) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+
+2024-02-04 10:34:38.658  INFO 3156807 --- [nio-8022-exec-9] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:curl http://8.134.141.39:5230/api/v1/memo -H "Accept: application/json" -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoiV2lsbGlhbXJqdyIsImlzcyI6Im1lbW9zIiwic3ViIjoiMSIsImF1ZCI6WyJ1c2VyLmFjY2Vzcy10b2tlbiJdLCJleHAiOjE3MDcwNDI2NzQsImlhdCI6MTcwNzAxMzg3Mn0.tg087iuzlyQO7BMHGCjWV_rmjLca9D3QDPoDo_0W4l0"
+2024-02-04 10:34:39.069  INFO 3156807 --- [nio-8022-exec-9] com.jhh.rossystem.utils.ChannelUtil      :  result:[  {    "id": 9,    "name": "STrsxttvfuEr2Vvy8iXD2h",    "rowStatus": "NORMAL",    "creatorId": 1,    "createdTs": 1707013770,    "updatedTs": 1707013770,    "displayTs": 1707013770,    "content": "## 对memos的API调用\n```bash\ncurl https://demo.usememos.com/api/v1/memo \\\n   -H \"Accept: application/json\" \\\n   -H \"Authorization: Bearer {YOUR_ACCESS_TOKEN}\"\n```\n",    "visibility": "PRIVATE",    "pinned": false,    "creatorName": "Williamrjw",    "creatorUsername": "Williamrjw",    "resourceList": [],    "relationList": []  },  {    "id": 8,    "name": "jCypLxxcTXvakr8mSgwGBL",    "rowStatus": "NORMAL",    "creatorId": 1,    "createdTs": 1706946739,    "updatedTs": 1706946876,    "displayTs": 1706946739,    "content": "#三国杀修改 \n黄盖小增强\n甘宁限定改非限定\n吕蒙不能有觉醒技\n陆逊国战修改",    "visibility": "PRIVATE",    "pinned": false,    "creatorName": "Williamrjw",    "creatorUsername": "Williamrjw",    "resourceList": [],    "relationList": []  },  {    "id": 7,    "name": "29h4wTp7jAA9y7NBuvsDRd",    "rowStatus": "NORMAL",    "creatorId": 1,    "createdTs": 1706863670,    "updatedTs": 1706863670,    "displayTs": 1706863670,    "content": "#bash学习语法 \n## sudo默认情况下不包含用户的PATH\n### 当我使用docker-compose的github仓库release版本安装时，安装完毕后，调用docker-compose执行命令提示permission 不足，而使用sudo执行则提示命令不存在，应当如何解决？\n在Docker和docker-compose的安装过程中，有时候会遇到权限问题或者无法找到命令的情况。以下是一些可能的解决方法：\n1. **权限问题解决：**\n   - 确保当前用户被添加到**docker**组中，这可以通过以下命令完成：\n```bash\nsudo usermod -aG docker $USER\n```\n请注意，您可能需要重新登录或者注销并重新登录以使更改生效。\n\n   - 如果您在使用**docker-compose**命令时仍然遇到权限问题，您可能需要确保**docker-compose**可执行文件的权限正确。您可以运行以下命令：\n```bash\nsudo chmod +x /usr/local/bin/docker-compose\n```\n或者如果您的**docker-compose**安装路径不同，请相应地更改路径。\n\n2. **命令不存在问题解决：**\n   - 当您在没有使用**sudo**的情况下无法找到**docker-compose**命令时，请确保**docker-compose**可执行文件的路径已被正确添加到您的系统**PATH**中。您可以在终端中运行以下命令将其添加到**PATH**：\n```bash\nexport PATH=$PATH:/usr/local/bin\n```\n请注意，上述路径应该是您的**docker-compose**可执行文件的实际路径。\n\n   - 如果您在使用**sudo**时无法找到**docker-compose**命令，这可能是因为**sudo**默认情况下不包含用户的**PATH**。您可以通过以下方式解决：\n```bash\nsudo env \"PATH=$PATH\" docker-compose \u003cyour-command\u003e\n```\n替换**\u003cyour-command\u003e**为您要运行的实际**docker-compose**命令。\n请记住，这些解决方法可能因系统和环境而异。如果您仍然遇到问题，建议查看Docker和docker-compose的文档，以获取有关特定平台的更多详细信息。\n",    "visibility": "PUBLIC",    "pinned": false,    "creatorName": "Williamrjw",    "creatorUsername": "Williamrjw",    "resourceList": [],    "relationList": []  },  {    "id": 6,    "name": "3rMekphj8BBAyap6md8cUY",    "rowStatus": "NORMAL",    "creatorId": 1,    "createdTs": 1706863349,    "updatedTs": 1706863372,    "displayTs": 1706863349,    "content": "#bash学习语法\n## 权限rwx\n### linux文件系统中的3个rwx分别指的是谁的权限？\n在Linux文件系统中，每个文件或目录都有三组权限，分别对应于文件的所有者（`Owner`）、文件的所属组（`Group`）以及其他用户（`Others`）。这三组权限分别表示读（`Read`，用r表示）、写（`Write`，用w表示）、执行（`Execute`，用x表示）的权限。\nr（`Read`）：表示该用户对该文件有读取权限。\nw（`Write`）：表示该用户对该文件有写入权限。\nx（`Execute`）：表示该用户对该文件有执行权限。\n这三个权限可以用数字表示，分别为 4（`Read`）、2（`Write`）、1（`Execute`）。因此，rwx 权限对应的数字是 `7`（`4+2+1`）。\n其他两组权限的意义类似：\n---\n### 如何查看文件所有者和所属组\n在Linux系统中，你可以使用 ls 命令来查看文件的所有者和所属组。以下是一些有关文件所有者和所属组的命令：\n1. 查看当前目录下文件的所有者和所属组：\n```bash\nls -l\n```\n输出结果中，第三列是文件所有者的用户名，第四列是文件所属组的组名。\n2. 查看指定文件或目录的所有者和所属组：\n```bash\nls -l \u003c文件或目录名\u003e\n```\n例如，查看文件 example.txt 的所有者和所属组：\n```bash\nls -l example.txt\n```\n3. 查看更详细的信息，包括用户ID和组ID：\n```bash\nls -n\n```\n输出结果中，第三列是文件所有者的用户ID，第四列是文件所属组的组ID。\n```bash\nls -n example.txt\n```\n这样你就可以看到数字形式的用户ID和组ID。\n4. 查看当前用户的所有文件的详细信息：\n```bash\nls -la\n```\n这会显示包括隐藏文件在内的详细信息，包括所有者和所属组。\n请注意，你需要有足够的权限来执行这些命令。如果你没有足够的权限，可以尝试使用 sudo 命令获取超级用户权限。\n---\n### 实例测试\n```Bash\n[ecs-user@iZ7xvdqt819qrd65vd5ehlZ myBlog]$ ls -la\ntotal 40\ndrwxr-xr-x 9 root     root     4096 Jan  1 18:37 .\ndrwxrwxr-x 3 ecs-user ecs-user 4096 Jan  1 18:40 ..\ndrwxr-xrwx 2 root     root     4096 Jan  1 18:37 archetypes\n-rwxr-xrwx 1 root     root       82 Jan  1 18:37 config.toml\ndrwxr-xrwx 2 root     root     4096 Jan  1 18:37 content\ndrwxr-xrwx 2 root     root     4096 Jan  1 18:37 data\ndrwxr-xrwx 2 root     root     4096 Jan  1 18:37 layouts\ndrwxr-xrwx 2 root     root     4096 Jan  1 18:37 public\ndrwxr-xrwx 2 root     root     4096 Jan  1 18:37 static\ndrwxr-xrwx 2 root     root     4096 Jan  1 18:37 themes\n[ecs-user@iZ7xvdqt819qrd65vd5ehlZ myBlog]$ ls -n\ntotal 32\ndrwxr-xrwx 2 0 0 4096 Jan  1 18:37 archetypes\n-rwxr-xrwx 1 0 0   82 Jan  1 18:37 config.toml\ndrwxr-xrwx 2 0 0 4096 Jan  1 18:37 content\ndrwxr-xrwx 2 0 0 4096 Jan  1 18:37 data\ndrwxr-xrwx 2 0 0 4096 Jan  1 18:37 layouts\ndrwxr-xrwx 2 0 0 4096 Jan  1 18:37 public\ndrwxr-xrwx 2 0 0 4096 Jan  1 18:37 static\ndrwxr-xrwx 2 0 0 4096 Jan  1 18:37 themes\n```\n\n```Bash\n[ecs-user@iZ7xvdqt819qrd65vd5ehlZ myBlog]$ ls -la\ntotal 40\ndrwxr-xr-x 9 root     root     4096 Jan  1 18:37 .\ndrwxrwxr-x 3 ecs-user ecs-user 4096 Jan  1 18:40 ..\ndrwxr-xr-x 2 root     root     4096 Jan  1 18:37 archetypes\n-rw-r--r-- 1 root     root       82 Jan  1 18:37 config.toml\ndrwxr-xr-x 2 root     root     4096 Jan  1 18:37 content\ndrwxr-xr-x 2 root     root     4096 Jan  1 18:37 data\ndrwxr-xr-x 2 root     root     4096 Jan  1 18:37 layouts\ndrwxr-xr-x 2 root     root     4096 Jan  1 18:37 public\ndrwxr-xr-x 2 root     root     4096 Jan  1 18:37 static\ndrwxr-xr-x 2 root     root     4096 Jan  1 18:37 themes\n[ecs-user@iZ7xvdqt819qrd65vd5ehlZ myBlog]$ sudo chmod 757 ./*\n[ecs-user@iZ7xvdqt819qrd65vd5ehlZ myBlog]$ ls -la\ntotal 40\ndrwxr-xr-x 9 root     root     4096 Jan  1 18:37 .\ndrwxrwxr-x 3 ecs-user ecs-user 4096 Jan  1 18:40 ..\ndrwxr-xrwx 2 root     root     4096 Jan  1 18:37 archetypes\n-rwxr-xrwx 1 root     root       82 Jan  1 18:37 config.toml\ndrwxr-xrwx 2 root     root     4096 Jan  1 18:37 content\ndrwxr-xrwx 2 root     root     4096 Jan  1 18:37 data\ndrwxr-xrwx 2 root     root     4096 Jan  1 18:37 layouts\ndrwxr-xrwx 2 root     root     4096 Jan  1 18:37 public\ndrwxr-xrwx 2 root     root     4096 Jan  1 18:37 static\ndrwxr-xrwx 2 root     root     4096 Jan  1 18:37 themes\n```\n",    "visibility": "PUBLIC",    "pinned": false,    "creatorName": "Williamrjw",    "creatorUsername": "Williamrjw",    "resourceList": [],    "relationList": []  },  {    "id": 5,    "name": "KeGp5ZgcNKBu5TQ7ELw8Zi",    "rowStatus": "NORMAL",    "creatorId": 1,    "createdTs": 1706862728,    "updatedTs": 1706862728,    "displayTs": 1706862728,    "content": "#住房要求 \n# 隔音室篇\n1. 隔音室不要太大，要有隔音、防火材料，只需要一张床，一个大屏幕即可。\n2. 可以是这样摆放，一张双人床三遍紧贴着墙，第四面隔着1个门的距离放屏幕，门就在门的位置。\n",    "visibility": "PRIVATE",    "pinned": false,    "creatorName": "Williamrjw",    "creatorUsername": "Williamrjw",    "resourceList": [],    "relationList": []  },  {    "id": 4,    "name": "EmVKeoZixtoWaMntgM22US",    "rowStatus": "NORMAL",    "creatorId": 1,    "createdTs": 1706862137,    "updatedTs": 1706862149,    "displayTs": 1706862137,    "content": "#住房要求 \n# 厕所篇\n1. 干湿分离，分成三个区域，三个区域要互不影响，三件事同时可以有人做。（或有两个卫生间）\n2. 排气扇要足够给力，浴霸保暖要合格，淋浴喷头需要经常换，水要大要够热，热水量要够一家人多一个使用。\n3. 不容易长霉（若在南方定居），瓷砖等要好打理，地漏要尽可能在地势最低处。\n4. 吊顶要牢靠，不要漏水。\n5. 洗手台的水龙头要可以大范围移动，避免水只能从一个位置出。\n6. 不要用旋转的漏水阀，即使要有也不可以在水龙头正下方。（满足了5，该条自动满足）\n7. 马桶不可以溅起水花到屁股上。",    "visibility": "PRIVATE",    "pinned": false,    "creatorName": "Williamrjw",    "creatorUsername": "Williamrjw",    "resourceList": [],    "relationList": []  }]
+2024-02-05 05:01:35.614  INFO 3156807 --- [nio-8022-exec-4] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x020x000x010x000x010xfc0x030x030xf70xb00x15a0xb50x040xb6%0x1c ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:419) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:271) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+
+2024-02-07 04:57:56.270  INFO 3156807 --- [nio-8022-exec-9] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x020x000x010x000x010xfc0x030x030xf8s0x86pO0x0dg0x02C0xd00xeb0xb9a0xe2h"0xd9'0xf70xa10xde0x040xa50xb7D0x020x0a'0xc40xd8vy0x000x000x840xc000xc0,0xc0(0xc0$0xc00x140xc00x0a0xc0"0xc0!0x000xa30x000x9f0x00k0x00j0x0090x0080x000x880x000x870xc020xc0.0xc0*0xc0&0xc00x0f0xc00x050x000x9d0x00=0x0050x000x840xc00x120xc00x080xc00x1c0xc00x1b0x000x160x000x130xc00x0d0xc00x030x000x0a0xc0/0xc0+0xc0'0xc0#0xc00x130xc00x090xc00x1f0xc00x1e0x000xa20x000x9e0x00g0x00@0x0030x0020x000x9a0x000x990x00E0x00D0xc010xc0-0xc0)0xc0%0xc00x0e0xc00x040x000x9c0x00<0x00/0x000x960x00A0x000x070x000xff0x010x000x01O0x000x0b0x000x040x030x000x010x020x000x0a0x0040x0020x000x0e0x000x0d0x000x190x000x0b0x000x0c0x000x180x000x090x000x0a0x000x160x000x170x000x080x000x060x000x070x000x140x000x150x000x040x000x050x000x120x000x130x000x010x000x020x000x030x000x0f0x000x100x000x110x000x0d0x00 ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:419) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:271) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+
+2024-02-08 04:58:30.517  INFO 3156807 --- [nio-8022-exec-3] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x020x000x010x000x010xfc0x030x030xed0xecZ,0xe50xe50xea0x09c0xbc0xb30xe2)5+0x110xba0xafs0xf70xb90xcc!&ep0x930xaa0x920x9f)O0x000x000x840xc000xc0,0xc0(0xc0$0xc00x140xc00x0a0xc0"0xc0!0x000xa30x000x9f0x00k0x00j0x0090x0080x000x880x000x870xc020xc0.0xc0*0xc0&0xc00x0f0xc00x050x000x9d0x00=0x0050x000x840xc00x120xc00x080xc00x1c0xc00x1b0x000x160x000x130xc00x0d0xc00x030x000x0a0xc0/0xc0+0xc0'0xc0#0xc00x130xc00x090xc00x1f0xc00x1e0x000xa20x000x9e0x00g0x00@0x0030x0020x000x9a0x000x990x00E0x00D0xc010xc0-0xc0)0xc0%0xc00x0e0xc00x040x000x9c0x00<0x00/0x000x960x00A0x000x070x000xff0x010x000x01O0x000x0b0x000x040x030x000x010x020x000x0a0x0040x0020x000x0e0x000x0d0x000x190x000x0b0x000x0c0x000x180x000x090x000x0a0x000x160x000x170x000x080x000x060x000x070x000x140x000x150x000x040x000x050x000x120x000x130x000x010x000x020x000x030x000x0f0x000x100x000x110x000x0d0x00 ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:419) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:271) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+
+2024-02-10 04:57:17.611  INFO 3156807 --- [nio-8022-exec-9] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x020x000x010x000x010xfc0x030x03GO0x120xedA0xe00xc3y0xe90x0c0xb30x020xea$0xcf0x9e!sL0xbd>L0x9eY0xe84q@20xe7=0x940x000x000x840xc000xc0,0xc0(0xc0$0xc00x140xc00x0a0xc0"0xc0!0x000xa30x000x9f0x00k0x00j0x0090x0080x000x880x000x870xc020xc0.0xc0*0xc0&0xc00x0f0xc00x050x000x9d0x00=0x0050x000x840xc00x120xc00x080xc00x1c0xc00x1b0x000x160x000x130xc00x0d0xc00x030x000x0a0xc0/0xc0+0xc0'0xc0#0xc00x130xc00x090xc00x1f0xc00x1e0x000xa20x000x9e0x00g0x00@0x0030x0020x000x9a0x000x990x00E0x00D0xc010xc0-0xc0)0xc0%0xc00x0e0xc00x040x000x9c0x00<0x00/0x000x960x00A0x000x070x000xff0x010x000x01O0x000x0b0x000x040x030x000x010x020x000x0a0x0040x0020x000x0e0x000x0d0x000x190x000x0b0x000x0c0x000x180x000x090x000x0a0x000x160x000x170x000x080x000x060x000x070x000x140x000x150x000x040x000x050x000x120x000x130x000x010x000x020x000x030x000x0f0x000x100x000x110x000x0d0x00 ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:419) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:271) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+
+2024-02-11 05:19:16.421  INFO 3156807 --- [nio-8022-exec-3] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x020x000x010x000x010xfc0x030x03L0xebK0xfc0x110xd4BX0x180xd70xebD0x037g0xb8u0xbe(&0xd00x140x090xbc0xe40x91W0x0fd0x030x1fc0x000x000x840xc000xc0,0xc0(0xc0$0xc00x140xc00x0a0xc0"0xc0!0x000xa30x000x9f0x00k0x00j0x0090x0080x000x880x000x870xc020xc0.0xc0*0xc0&0xc00x0f0xc00x050x000x9d0x00=0x0050x000x840xc00x120xc00x080xc00x1c0xc00x1b0x000x160x000x130xc00x0d0xc00x030x000x0a0xc0/0xc0+0xc0'0xc0#0xc00x130xc00x090xc00x1f0xc00x1e0x000xa20x000x9e0x00g0x00@0x0030x0020x000x9a0x000x990x00E0x00D0xc010xc0-0xc0)0xc0%0xc00x0e0xc00x040x000x9c0x00<0x00/0x000x960x00A0x000x070x000xff0x010x000x01O0x000x0b0x000x040x030x000x010x020x000x0a0x0040x0020x000x0e0x000x0d0x000x190x000x0b0x000x0c0x000x180x000x090x000x0a0x000x160x000x170x000x080x000x060x000x070x000x140x000x150x000x040x000x050x000x120x000x130x000x010x000x020x000x030x000x0f0x000x100x000x110x000x0d0x00 ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:419) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:271) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+
+2024-02-13 04:56:28.124  INFO 3156807 --- [nio-8022-exec-9] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x020x000x010x000x010xfc0x030x03T0xe3o0xbb0x8f0xdaa0xea0x01I0xf0OW0x980x020xeb0x88u070xb20xdb}"0xf4P0xe40x9e0xd8w0xbel0x000x000x840xc000xc0,0xc0(0xc0$0xc00x140xc00x0a0xc0"0xc0!0x000xa30x000x9f0x00k0x00j0x0090x0080x000x880x000x870xc020xc0.0xc0*0xc0&0xc00x0f0xc00x050x000x9d0x00=0x0050x000x840xc00x120xc00x080xc00x1c0xc00x1b0x000x160x000x130xc00x0d0xc00x030x000x0a0xc0/0xc0+0xc0'0xc0#0xc00x130xc00x090xc00x1f0xc00x1e0x000xa20x000x9e0x00g0x00@0x0030x0020x000x9a0x000x990x00E0x00D0xc010xc0-0xc0)0xc0%0xc00x0e0xc00x040x000x9c0x00<0x00/0x000x960x00A0x000x070x000xff0x010x000x01O0x000x0b0x000x040x030x000x010x020x000x0a0x0040x0020x000x0e0x000x0d0x000x190x000x0b0x000x0c0x000x180x000x090x000x0a0x000x160x000x170x000x080x000x060x000x070x000x140x000x150x000x040x000x050x000x120x000x130x000x010x000x020x000x030x000x0f0x000x100x000x110x000x0d0x00 ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:419) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:271) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+
+2024-02-14 05:00:02.164  INFO 3156807 --- [nio-8022-exec-3] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x020x000x010x000x010xfc0x030x030x130xb90xa80x0e0xab0xc60xc00xc6,T0x8a0x900xe40x940xbf0xb40x1d0x090x86{v90/0x1340x92b,0xe3L0xce0x000x000x840xc000xc0,0xc0(0xc0$0xc00x140xc00x0a0xc0"0xc0!0x000xa30x000x9f0x00k0x00j0x0090x0080x000x880x000x870xc020xc0.0xc0*0xc0&0xc00x0f0xc00x050x000x9d0x00=0x0050x000x840xc00x120xc00x080xc00x1c0xc00x1b0x000x160x000x130xc00x0d0xc00x030x000x0a0xc0/0xc0+0xc0'0xc0#0xc00x130xc00x090xc00x1f0xc00x1e0x000xa20x000x9e0x00g0x00@0x0030x0020x000x9a0x000x990x00E0x00D0xc010xc0-0xc0)0xc0%0xc00x0e0xc00x040x000x9c0x00<0x00/0x000x960x00A0x000x070x000xff0x010x000x01O0x000x0b0x000x040x030x000x010x020x000x0a0x0040x0020x000x0e0x000x0d0x000x190x000x0b0x000x0c0x000x180x000x090x000x0a0x000x160x000x170x000x080x000x060x000x070x000x140x000x150x000x040x000x050x000x120x000x130x000x010x000x020x000x030x000x0f0x000x100x000x110x000x0d0x00 ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:419) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:271) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+
+2024-02-16 05:00:24.798  INFO 3156807 --- [nio-8022-exec-9] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x020x000x010x000x010xfc0x030x030xffa0x800x120x030xec:0x10Y0xd10xf00x0b0x8d0xe650x19V0xc70x090xa9k0x170xe80x8e0xaePc0xdf0x7f0x890xf9D0x000x000x840xc000xc0,0xc0(0xc0$0xc00x140xc00x0a0xc0"0xc0!0x000xa30x000x9f0x00k0x00j0x0090x0080x000x880x000x870xc020xc0.0xc0*0xc0&0xc00x0f0xc00x050x000x9d0x00=0x0050x000x840xc00x120xc00x080xc00x1c0xc00x1b0x000x160x000x130xc00x0d0xc00x030x000x0a0xc0/0xc0+0xc0'0xc0#0xc00x130xc00x090xc00x1f0xc00x1e0x000xa20x000x9e0x00g0x00@0x0030x0020x000x9a0x000x990x00E0x00D0xc010xc0-0xc0)0xc0%0xc00x0e0xc00x040x000x9c0x00<0x00/0x000x960x00A0x000x070x000xff0x010x000x01O0x000x0b0x000x040x030x000x010x020x000x0a0x0040x0020x000x0e0x000x0d0x000x190x000x0b0x000x0c0x000x180x000x090x000x0a0x000x160x000x170x000x080x000x060x000x070x000x140x000x150x000x040x000x050x000x120x000x130x000x010x000x020x000x030x000x0f0x000x100x000x110x000x0d0x00 ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:419) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:271) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+
+2024-02-18 04:59:03.366  INFO 3156807 --- [nio-8022-exec-7] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x020x000x010x000x010xfc0x030x03>0xf40x0e>0xebW0x920x84~0xdc0xc70xa00xe50x810xdd0xc90x9d0x82c0x040xcfu0xbds0x010xd40xb30x8f0xa50xd10x990x0f0x000x000x840xc000xc0,0xc0(0xc0$0xc00x140xc00x0a0xc0"0xc0!0x000xa30x000x9f0x00k0x00j0x0090x0080x000x880x000x870xc020xc0.0xc0*0xc0&0xc00x0f0xc00x050x000x9d0x00=0x0050x000x840xc00x120xc00x080xc00x1c0xc00x1b0x000x160x000x130xc00x0d0xc00x030x000x0a0xc0/0xc0+0xc0'0xc0#0xc00x130xc00x090xc00x1f0xc00x1e0x000xa20x000x9e0x00g0x00@0x0030x0020x000x9a0x000x990x00E0x00D0xc010xc0-0xc0)0xc0%0xc00x0e0xc00x040x000x9c0x00<0x00/0x000x960x00A0x000x070x000xff0x010x000x01O0x000x0b0x000x040x030x000x010x020x000x0a0x0040x0020x000x0e0x000x0d0x000x190x000x0b0x000x0c0x000x180x000x090x000x0a0x000x160x000x170x000x080x000x060x000x070x000x140x000x150x000x040x000x050x000x120x000x130x000x010x000x020x000x030x000x0f0x000x100x000x110x000x0d0x00 ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:419) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:271) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+
+2024-02-19 05:11:25.664  INFO 3156807 --- [nio-8022-exec-9] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x020x000x010x000x010xfc0x030x030xf2|?%0xe00xe90xc0Fz0x8aE0x0c0xf40xb7x0x090xabs0x8cm0xb40xa3H0xac0xfd0xdb0xbd"0xe40x890xbe0xd20x000x000x840xc000xc0,0xc0(0xc0$0xc00x140xc00x0a0xc0"0xc0!0x000xa30x000x9f0x00k0x00j0x0090x0080x000x880x000x870xc020xc0.0xc0*0xc0&0xc00x0f0xc00x050x000x9d0x00=0x0050x000x840xc00x120xc00x080xc00x1c0xc00x1b0x000x160x000x130xc00x0d0xc00x030x000x0a0xc0/0xc0+0xc0'0xc0#0xc00x130xc00x090xc00x1f0xc00x1e0x000xa20x000x9e0x00g0x00@0x0030x0020x000x9a0x000x990x00E0x00D0xc010xc0-0xc0)0xc0%0xc00x0e0xc00x040x000x9c0x00<0x00/0x000x960x00A0x000x070x000xff0x010x000x01O0x000x0b0x000x040x030x000x010x020x000x0a0x0040x0020x000x0e0x000x0d0x000x190x000x0b0x000x0c0x000x180x000x090x000x0a0x000x160x000x170x000x080x000x060x000x070x000x140x000x150x000x040x000x050x000x120x000x130x000x010x000x020x000x030x000x0f0x000x100x000x110x000x0d0x00 ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:419) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:271) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+
+2024-02-20 05:15:01.184  INFO 3156807 --- [nio-8022-exec-3] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x020x000x010x000x010xfc0x030x03S0x1d0xd9>0xb30xbe0xael0xac0x070xab#0x0d0x100xe310xd2~0xbb0xa70xa60x0f0xc4iw0x9c0x18N0xd580xe8y0x000x000x840xc000xc0,0xc0(0xc0$0xc00x140xc00x0a0xc0"0xc0!0x000xa30x000x9f0x00k0x00j0x0090x0080x000x880x000x870xc020xc0.0xc0*0xc0&0xc00x0f0xc00x050x000x9d0x00=0x0050x000x840xc00x120xc00x080xc00x1c0xc00x1b0x000x160x000x130xc00x0d0xc00x030x000x0a0xc0/0xc0+0xc0'0xc0#0xc00x130xc00x090xc00x1f0xc00x1e0x000xa20x000x9e0x00g0x00@0x0030x0020x000x9a0x000x990x00E0x00D0xc010xc0-0xc0)0xc0%0xc00x0e0xc00x040x000x9c0x00<0x00/0x000x960x00A0x000x070x000xff0x010x000x01O0x000x0b0x000x040x030x000x010x020x000x0a0x0040x0020x000x0e0x000x0d0x000x190x000x0b0x000x0c0x000x180x000x090x000x0a0x000x160x000x170x000x080x000x060x000x070x000x140x000x150x000x040x000x050x000x120x000x130x000x010x000x020x000x030x000x0f0x000x100x000x110x000x0d0x00 ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:419) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:271) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+
+2024-02-22 04:55:27.860  INFO 3156807 --- [nio-8022-exec-9] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x020x000x010x000x010xfc0x030x030x810x100xfa0x860x860x7f0xb5dPjUp0x1b0x1e0x990xc80x960x1e0x9f ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:419) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:271) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+

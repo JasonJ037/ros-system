@@ -9,6 +9,7 @@ import com.jhh.rossystem.entity.ContainerPort;
 import com.jhh.rossystem.entity.Image;
 import com.jhh.rossystem.entity.SysContainer;
 import com.jhh.rossystem.entity.SysUser;
+import com.jhh.rossystem.entity.PortMapping;
 import com.jhh.rossystem.mapper.ContainerPortMapper;
 import com.jhh.rossystem.mapper.ImageMapper;
 import com.jhh.rossystem.mapper.SysContainerMapper;
@@ -45,28 +46,34 @@ public class SysContainerServiceimpl implements SysContainerService {
 
     @Resource
     private ImageMapper imageMapper;
+
     @Override
     public Result add(ContainerAddObject containerAddObject) {
         QueryWrapper<SysContainer> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("user_id", containerAddObject.getUserid());
 
-//        SysContainer sysContainer = sysContainerMapper.selectOne(queryWrapper);
+        // SysContainer sysContainer = sysContainerMapper.selectOne(queryWrapper);
 
         Long count = sysContainerMapper.selectCount(queryWrapper);
-        //容器数量限制
+        // 容器数量限制
         if (4 <= count) {
             return Result.fail("每个用户最多创建4个容器！");
         }
 
-        //取出端口号
-        List<Integer> ports = containerAddObject.getPorts();
-        //判断用户输入的端口号是否有重复
-        Set<Integer> uniquePorts = new HashSet<>();
+        // ports现在是PortMapping对象的列表
+        // 取出端口号
+        List<PortMapping> portMappings = containerAddObject.getPortMappings();
+        Set<Integer> uniqueExternalPorts = new HashSet<>();
+        Set<Integer> uniqueInternalPorts = new HashSet<>();
         Set<Integer> duplicatePorts = new HashSet<>();
 
-        for (Integer port : ports) {
-            if (!uniquePorts.add(port)) {
-                duplicatePorts.add(port);
+        // 检查重复的外部端口和内部端口
+        for (PortMapping portMapping : portMappings) {
+            if (!uniqueExternalPorts.add(portMapping.getExternal())) {
+                duplicatePorts.add(portMapping.getExternal());
+            }
+            if (!uniqueInternalPorts.add(portMapping.getInternal())) {
+                duplicatePorts.add(portMapping.getInternal());
             }
         }
 
@@ -74,36 +81,41 @@ public class SysContainerServiceimpl implements SysContainerService {
             return Result.fail("输入端口号重复");
         }
 
-        //检查容器端口是否已经存在
-        for(Integer port : ports){
-            QueryWrapper<ContainerPort> queryWrapper1=new QueryWrapper<>();
-            queryWrapper1.eq("port", port);
+        // 检查容器端口是否已经存在
+        for (PortMapping portMapping : portMappings) {
+            QueryWrapper<ContainerPort> queryWrapper1 = new QueryWrapper<>();
+            Integer externalPort = portMapping.getExternal();
+            queryWrapper1.eq("port", externalPort);
             Long count1 = containerPortMapper.selectCount(queryWrapper1);
 
-            //端口占用检测
-            if(port < 1024){
+            // 端口占用检测
+            if (externalPort < 1024) {
                 return Result.fail("不允许使用该范围端口!");
             }
-            if (count1!=0) {
+            if (count1 != 0) {
                 return Result.fail("端口已被占用！");
             }
         }
-
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         SysContainer sysContainer = new SysContainer();
         sysContainer.setName(containerAddObject.getName());
         sysContainer.setUserId(containerAddObject.getUserid());
         sysContainer.setStatus(0);
         // 生成的容器id这里写死了，后期需要改
 
-//        int imageid = containerAddObject.getImageid();
+        // int imageid = containerAddObject.getImageid();
         Image im = imageMapper.selectById(containerAddObject.getImageid());
-
-        String containerId = channelUtil.runDocker(ports.get(0), sysContainer.getName(), im.getVersion());; // 生成容器ID的逻辑需要根据实际需求修改
+        // 拿到extraConfig，即额外配置中的内容
+        String config = containerAddObject.getExtraConfig();
+        // runDocker函数已经将docker命令拼接好，把config填进去就好了
+        String containerId = channelUtil.runDocker(config, sysContainer.getName(), im.getVersion());
+        ; // 生成容器ID的逻辑需要根据实际需求修改
         containerId = containerId.substring(0, 12);
-//        System.out.println(dockerService.runDocker(8014,"wdd",0));
-//        String dockerID = dockerService.runDocker(sysContainer.getPort(), sysContainer.getContainerName(), sysContainer.getVersionId()); // 异步启动容器
-//        sysContainer.setContainerId(dockerID.substring(0,12));
-//        System.out.println(dockerID);
+        // System.out.println(dockerService.runDocker(8014,"wdd",0));
+        // String dockerID = dockerService.runDocker(sysContainer.getPort(),
+        // sysContainer.getContainerName(), sysContainer.getVersionId()); // 异步启动容器
+        // sysContainer.setContainerId(dockerID.substring(0,12));
+        // System.out.println(dockerID);
         sysContainer.setContainerId(containerId);
         sysContainer.setVersionId(containerAddObject.getVersionid());
 
@@ -119,7 +131,7 @@ public class SysContainerServiceimpl implements SysContainerService {
         }
 
         // 为容器添加端口
-        for (Integer port : ports) {
+        for (Integer port : uniqueExternalPorts) {
             ContainerPort containerPort = new ContainerPort();
             containerPort.setContainerId(containerId);
             containerPort.setPort(port);
@@ -131,7 +143,7 @@ public class SysContainerServiceimpl implements SysContainerService {
             }
         }
         return Result.ok(0, "添加成功");
-
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////
     }
 
     @Override
@@ -144,9 +156,9 @@ public class SysContainerServiceimpl implements SysContainerService {
             // 如果 page 或 limit 为 null，创建一个不进行分页的 IPage 对象
             iPage = new Page<>();
         }
-    
+
         QueryWrapper<SysContainer> queryWrapper = new QueryWrapper<>();
-        //queryWrapper.eq(null != querySearch, "user_id", querySearch);
+        // queryWrapper.eq(null != querySearch, "user_id", querySearch);
         // 查询条件
         if ("name".equals(querySearch)) {
             queryWrapper.like("name", value);
@@ -154,12 +166,12 @@ public class SysContainerServiceimpl implements SysContainerService {
             queryWrapper.eq("status", value);
         } else if ("version_id".equals(querySearch)) {
             queryWrapper.eq("version_id", value);
-        } else if("user_id".equals(querySearch)){
-            queryWrapper.eq("user_id",value);
+        } else if ("user_id".equals(querySearch)) {
+            queryWrapper.eq("user_id", value);
         }
         queryWrapper.orderByAsc("id");
-        iPage = sysContainerMapper.selectPage(iPage,queryWrapper);
-        List<SysContainer>  list = iPage.getRecords();
+        iPage = sysContainerMapper.selectPage(iPage, queryWrapper);
+        List<SysContainer> list = iPage.getRecords();
         if (list.isEmpty()) {
             return Result.fail("查询为空");
         }
@@ -172,17 +184,17 @@ public class SysContainerServiceimpl implements SysContainerService {
         Map<String, List<Integer>> containerPortsMap = new HashMap<>();
         List<String> containerIds = list.stream().map(SysContainer::getContainerId).collect(Collectors.toList());
         for (String containerId : containerIds) {
-            //获取containerId对应的containerport对象
-            QueryWrapper<ContainerPort> queryWrapper1=new QueryWrapper<>();
-            queryWrapper1.eq("container_id",containerId);
+            // 获取containerId对应的containerport对象
+            QueryWrapper<ContainerPort> queryWrapper1 = new QueryWrapper<>();
+            queryWrapper1.eq("container_id", containerId);
             List<ContainerPort> containerPorts = containerPortMapper.selectList(queryWrapper1);
-            //根据containerport对象获取port的list
+            // 根据containerport对象获取port的list
             List<Integer> portList = containerPorts.stream()
                     .map(ContainerPort::getPort) // 使用map方法提取port属性
                     .collect(Collectors.toList());
             containerPortsMap.put(String.valueOf(containerId), portList);
         }
-        //把查出来的容器的关联对象user的信息填全
+        // 把查出来的容器的关联对象user的信息填全
         for (SysContainer container : list) {
             for (SysUser user : userList) {
                 if (user.getId().equals(container.getUserId())) {
@@ -253,11 +265,12 @@ public class SysContainerServiceimpl implements SysContainerService {
         }
         String filename = file.getOriginalFilename();
         channelUtil.uploadFile(file);
-        //channelUtil.dockerCp(containerId, filename);
+        channelUtil.dockerUpload(containerId, filename);
         return Result.ok();
     }
 
-    public Result downloadFile(String path,Integer id) {
+    @Override
+    public Result downloadFile(String path, Integer id) {
         SysContainer container = sysContainerMapper.selectById(id);
         if (null == container) {
             return Result.fail("容器数据异常！");
@@ -266,7 +279,7 @@ public class SysContainerServiceimpl implements SysContainerService {
         if (StringUtils.isBlank(containerId)) {
             return Result.fail("容器数据异常！");
         }
-        //utils相关download方法
+        // utils相关download方法
         return Result.ok();
     }
 

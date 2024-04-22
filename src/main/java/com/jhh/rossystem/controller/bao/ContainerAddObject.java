@@ -11,4 +11,5 @@ public class ContainerAddObject {
     private Integer imageid;
     private Integer versionid;
     private List<Integer> ports;
+    private String extraConfig;
 }

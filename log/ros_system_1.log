@@ -1,0 +1,201 @@
+nohup: 忽略输入
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::               (v2.6.13)
+
+2024-01-19 18:40:09.067  INFO 3178212 --- [           main] com.jhh.rossystem.RosSystemApplication   : Starting RosSystemApplication using Java 17.0.9 on micl-Super-Server with PID 3178212 (/home/micl/ros-web/ros-system/target/ros-system-0.0.1-SNAPSHOT.jar started by micl in /home/micl/ros-web/ros-system)
+2024-01-19 18:40:09.081  INFO 3178212 --- [           main] com.jhh.rossystem.RosSystemApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-01-19 18:40:10.152  INFO 3178212 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8022 (http)
+2024-01-19 18:40:10.163  INFO 3178212 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-19 18:40:10.163  INFO 3178212 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2024-01-19 18:40:10.233  INFO 3178212 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-19 18:40:10.233  INFO 3178212 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1108 ms
+ _ _   |_  _ _|_. ___ _ |    _ 
+| | |\/|_)(_| | |_\  |_)||_|_\ 
+     /               |         
+                        3.5.2 
+2024-01-19 18:40:11.033  WARN 3178212 --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat server
+2024-01-19 18:40:11.037  INFO 3178212 --- [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-01-19 18:40:11.048  INFO 3178212 --- [           main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-01-19 18:40:11.069 ERROR 3178212 --- [           main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat server
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:181) ~[spring-context-5.3.23.jar!/:5.3.23]
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54) ~[spring-context-5.3.23.jar!/:5.3.23]
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356) ~[spring-context-5.3.23.jar!/:5.3.23]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155) ~[spring-context-5.3.23.jar!/:5.3.23]
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123) ~[spring-context-5.3.23.jar!/:5.3.23]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:935) ~[spring-context-5.3.23.jar!/:5.3.23]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586) ~[spring-context-5.3.23.jar!/:5.3.23]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.13.jar!/:2.6.13]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:745) ~[spring-boot-2.6.13.jar!/:2.6.13]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:420) ~[spring-boot-2.6.13.jar!/:2.6.13]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.6.13.jar!/:2.6.13]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1317) ~[spring-boot-2.6.13.jar!/:2.6.13]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.6.13.jar!/:2.6.13]
+	at com.jhh.rossystem.RosSystemApplication.main(RosSystemApplication.java:14) ~[classes!/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49) ~[ros-system-0.0.1-SNAPSHOT.jar:na]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108) ~[ros-system-0.0.1-SNAPSHOT.jar:na]
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58) ~[ros-system-0.0.1-SNAPSHOT.jar:na]
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88) ~[ros-system-0.0.1-SNAPSHOT.jar:na]
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat server
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:229) ~[spring-boot-2.6.13.jar!/:2.6.13]
+	at org.springframework.boot.web.servlet.context.WebServerStartStopLifecycle.start(WebServerStartStopLifecycle.java:43) ~[spring-boot-2.6.13.jar!/:2.6.13]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178) ~[spring-context-5.3.23.jar!/:5.3.23]
+	... 22 common frames omitted
+Caused by: java.lang.IllegalArgumentException: standardService.connector.startFailed
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:238) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:282) ~[spring-boot-2.6.13.jar!/:2.6.13]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:213) ~[spring-boot-2.6.13.jar!/:2.6.13]
+	... 24 common frames omitted
+Caused by: org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1077) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:234) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	... 26 common frames omitted
+Caused by: java.net.BindException: 地址已在使用
+	at java.base/sun.nio.ch.Net.bind0(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.bind(Net.java:555) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.netBind(ServerSocketChannelImpl.java:337) ~[na:na]
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:294) ~[na:na]
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:275) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:230) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.net.AbstractEndpoint.bindWithCleanup(AbstractEndpoint.java:1227) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1313) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:617) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1074) ~[tomcat-embed-core-9.0.68.jar!/:na]
+	... 28 common frames omitted
+
+nohup: 忽略输入
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::               (v2.6.13)
+
+2024-01-19 18:45:27.795  INFO 3189663 --- [           main] com.jhh.rossystem.RosSystemApplication   : Starting RosSystemApplication using Java 17.0.9 on micl-Super-Server with PID 3189663 (/home/micl/ros-web/ros-system/target/ros-system-0.0.1-SNAPSHOT.jar started by micl in /home/micl/ros-web/ros-system)
+2024-01-19 18:45:27.798  INFO 3189663 --- [           main] com.jhh.rossystem.RosSystemApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-01-19 18:45:28.911  INFO 3189663 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8022 (http)
+2024-01-19 18:45:28.925  INFO 3189663 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-19 18:45:28.925  INFO 3189663 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2024-01-19 18:45:29.020  INFO 3189663 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-19 18:45:29.021  INFO 3189663 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1171 ms
+ _ _   |_  _ _|_. ___ _ |    _ 
+| | |\/|_)(_| | |_\  |_)||_|_\ 
+     /               |         
+                        3.5.2 
+2024-01-19 18:45:29.906  INFO 3189663 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8022 (http) with context path ''
+2024-01-19 18:45:29.917  INFO 3189663 --- [           main] com.jhh.rossystem.RosSystemApplication   : Started RosSystemApplication in 2.488 seconds (JVM running for 2.867)
+2024-01-19 18:47:09.716  INFO 3189663 --- [nio-8022-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-19 18:47:09.717  INFO 3189663 --- [nio-8022-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-19 18:47:09.718  INFO 3189663 --- [nio-8022-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-01-19 18:47:09.929  INFO 3189663 --- [nio-8022-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-19 18:47:10.265  INFO 3189663 --- [nio-8022-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-19 19:22:01.959  INFO 3189663 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-01-19 19:22:01.981  INFO 3189663 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+nohup: 忽略输入
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::               (v2.6.13)
+
+2024-01-19 19:22:10.514  INFO 3266938 --- [           main] com.jhh.rossystem.RosSystemApplication   : Starting RosSystemApplication using Java 17.0.9 on micl-Super-Server with PID 3266938 (/home/micl/ros-web/ros-system/target/ros-system-0.0.1-SNAPSHOT.jar started by micl in /home/micl/ros-web/ros-system)
+2024-01-19 19:22:10.517  INFO 3266938 --- [           main] com.jhh.rossystem.RosSystemApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-01-19 19:22:11.595  INFO 3266938 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8022 (http)
+2024-01-19 19:22:11.606  INFO 3266938 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-19 19:22:11.607  INFO 3266938 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2024-01-19 19:22:11.678  INFO 3266938 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-19 19:22:11.679  INFO 3266938 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1110 ms
+ _ _   |_  _ _|_. ___ _ |    _ 
+| | |\/|_)(_| | |_\  |_)||_|_\ 
+     /               |         
+                        3.5.2 
+2024-01-19 19:22:12.461  INFO 3266938 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8022 (http) with context path ''
+2024-01-19 19:22:12.470  INFO 3266938 --- [           main] com.jhh.rossystem.RosSystemApplication   : Started RosSystemApplication in 2.345 seconds (JVM running for 2.751)
+2024-01-19 19:22:31.009  INFO 3266938 --- [nio-8022-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-19 19:22:31.009  INFO 3266938 --- [nio-8022-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-19 19:22:31.010  INFO 3266938 --- [nio-8022-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-01-19 19:22:31.195  INFO 3266938 --- [nio-8022-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-19 19:22:31.455  INFO 3266938 --- [nio-8022-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-19 19:22:50.550  INFO 3266938 --- [nio-8022-exec-4] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:docker build -t smsb fslfjsdaf
+2024-01-19 19:31:58.807  INFO 3266938 --- [nio-8022-exec-9] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:docker rmi smsb
+2024-01-19 19:32:29.662  INFO 3266938 --- [nio-8022-exec-1] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:docker build -t fsaonvsa feison:
+2024-01-19 19:32:34.693  INFO 3266938 --- [nio-8022-exec-3] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:docker rmi fsaonvsa
+2024-01-19 19:33:50.326  INFO 3266938 --- [io-8022-exec-10] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:docker build -t shenmegui filc
+2024-01-19 19:33:54.613  INFO 3266938 --- [nio-8022-exec-2] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:docker rmi shenmegui
+2024-01-19 19:35:27.270  INFO 3266938 --- [nio-8022-exec-4] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:docker build -t cahn 
+2024-01-19 19:35:31.498  INFO 3266938 --- [nio-8022-exec-6] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:docker rmi cahn
+2024-01-19 19:37:58.509  INFO 3266938 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-01-19 19:37:58.516  INFO 3266938 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+nohup: 忽略输入
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::               (v2.6.13)
+
+2024-01-19 19:38:03.554  INFO 3301515 --- [           main] com.jhh.rossystem.RosSystemApplication   : Starting RosSystemApplication using Java 17.0.9 on micl-Super-Server with PID 3301515 (/home/micl/ros-web/ros-system/target/ros-system-0.0.1-SNAPSHOT.jar started by micl in /home/micl/ros-web/ros-system)
+2024-01-19 19:38:03.566  INFO 3301515 --- [           main] com.jhh.rossystem.RosSystemApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-01-19 19:38:04.680  INFO 3301515 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8022 (http)
+2024-01-19 19:38:04.692  INFO 3301515 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-01-19 19:38:04.693  INFO 3301515 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2024-01-19 19:38:04.763  INFO 3301515 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-01-19 19:38:04.763  INFO 3301515 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1151 ms
+ _ _   |_  _ _|_. ___ _ |    _ 
+| | |\/|_)(_| | |_\  |_)||_|_\ 
+     /               |         
+                        3.5.2 
+2024-01-19 19:38:05.531  INFO 3301515 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8022 (http) with context path ''
+2024-01-19 19:38:05.541  INFO 3301515 --- [           main] com.jhh.rossystem.RosSystemApplication   : Started RosSystemApplication in 2.365 seconds (JVM running for 2.776)
+2024-01-19 19:39:01.952  INFO 3301515 --- [nio-8022-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-01-19 19:39:01.952  INFO 3301515 --- [nio-8022-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-01-19 19:39:01.954  INFO 3301515 --- [nio-8022-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-01-19 19:39:02.154  INFO 3301515 --- [nio-8022-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-19 19:39:02.446  INFO 3301515 --- [nio-8022-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-19 19:39:20.317  INFO 3301515 --- [nio-8022-exec-3] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:docker pull shenmojiba
+2024-01-19 19:39:38.118  INFO 3301515 --- [nio-8022-exec-4] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:docker pull rsshub:latest
+2024-01-19 19:40:33.178  INFO 3301515 --- [nio-8022-exec-5] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:docker pull rsshub:latest
+2024-01-19 19:43:08.411  INFO 3301515 --- [nio-8022-exec-6] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:docker build -t hello-world:latest ~最基础的镜像
+2024-01-19 19:44:07.395  INFO 3301515 --- [nio-8022-exec-8] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:docker pull hello-world
+2024-01-19 19:46:14.518  INFO 3301515 --- [io-8022-exec-10] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:docker pull rsshub
+2024-01-19 19:53:34.588  INFO 3301515 --- [nio-8022-exec-1] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:docker rmi shenmojiba
+2024-01-19 19:53:38.397  INFO 3301515 --- [nio-8022-exec-3] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:docker rmi rsshub:latest
+2024-01-19 19:56:16.236  INFO 3301515 --- [nio-8022-exec-9] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:docker rmi hello-world:latest
+2024-01-19 19:57:46.000  INFO 3301515 --- [nio-8022-exec-3] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:docker pull rsshub
+2024-01-19 19:58:08.534  INFO 3301515 --- [nio-8022-exec-4] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:docker pull rsshub
+2024-01-20 09:42:25.215  INFO 3301515 --- [nio-8022-exec-5] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:docker pull rsshub
+2024-01-20 09:47:29.825  INFO 3301515 --- [nio-8022-exec-9] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:docker run --privileged -d -p 7890:8080 --expose=5900  --name="敬姐的容器" sxiaocaicai/new-ros-full-vnc:16.04
+2024-01-20 09:47:36.198  INFO 3301515 --- [nio-8022-exec-1] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:docker start 敬姐的容器
+2024-01-20 09:47:38.289  INFO 3301515 --- [nio-8022-exec-3] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:docker start 敬姐的容器
+2024-01-20 09:47:48.799  INFO 3301515 --- [nio-8022-exec-5] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:docker start 敬姐的容器
+2024-01-20 09:47:51.998  INFO 3301515 --- [nio-8022-exec-7] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:docker start 敬姐的容器
+2024-01-20 10:39:29.135  INFO 3301515 --- [nio-8022-exec-3] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:docker rm 敬姐的容器
+2024-01-20 10:40:03.220  INFO 3301515 --- [nio-8022-exec-8] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:docker run --privileged -d -p 7891:8080 --expose=5900  --name="jingjie" sxiaocaicai/new-ros-full-vnc:16.04
+2024-01-20 10:40:13.721  INFO 3301515 --- [io-8022-exec-10] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:docker start jingjie
+2024-01-20 10:40:17.968  INFO 3301515 --- [nio-8022-exec-2] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:docker start jingjie
+2024-01-20 10:40:19.792  INFO 3301515 --- [nio-8022-exec-4] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:docker start jingjie
+2024-01-20 10:42:53.884  INFO 3301515 --- [nio-8022-exec-6] com.jhh.rossystem.utils.ChannelUtil      : exec cmd:docker start jingjie
+2024-01-20 10:45:29.244  INFO 3301515 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-01-20 10:45:29.247  INFO 3301515 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
