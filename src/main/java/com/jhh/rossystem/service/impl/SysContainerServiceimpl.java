@@ -107,6 +107,9 @@ public class SysContainerServiceimpl implements SysContainerService {
         Image im = imageMapper.selectById(containerAddObject.getImageid());
         // 拿到extraConfig，即额外配置中的内容
         String config = containerAddObject.getExtraConfig();
+        for(PortMapping portMapping : portMappings){
+            config += " -p " + portMapping.getExternal() + ":" + portMapping.getInternal() + " ";
+        }
         // runDocker函数已经将docker命令拼接好，把config填进去就好了
         String containerId = channelUtil.runDocker(config, sysContainer.getName(), im.getVersion());
         ; // 生成容器ID的逻辑需要根据实际需求修改

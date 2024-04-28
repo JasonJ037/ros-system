@@ -146,7 +146,7 @@ public class ChannelUtil {
         // 拼接文件的本地路径
         String from = filePath + filename;
         // 拼接容器内的目标路径
-        String to = containerID + ":" + dockerPath;
+        String to = containerId + ":" + dockerPath;
         // 执行Docker复制命令，将文件从本地复制到容器中
         dockerCp(from, to);
     }
@@ -193,7 +193,7 @@ public class ChannelUtil {
         return containerID;
     }
     public String runDocker(String config, String dockerName, String version) {
-        String cmd = "docker run -d" + config + " --name=\"" + dockerName + "\" " + version;
+        String cmd = "docker run -d " + config + " --name=\"" + dockerName + "\" " + version;
         String containerID = executeCommand(cmd);
         return containerID;
     }
