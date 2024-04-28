@@ -62,7 +62,7 @@ public class SysContainerServiceimpl implements SysContainerService {
 
         // ports现在是PortMapping对象的列表
         // 取出端口号
-        List<PortMapping> portMappings = containerAddObject.getPortMappings();
+        List<PortMapping> portMappings = containerAddObject.getPorts();
         Set<Integer> uniqueExternalPorts = new HashSet<>();
         Set<Integer> uniqueInternalPorts = new HashSet<>();
         Set<Integer> duplicatePorts = new HashSet<>();
@@ -117,7 +117,7 @@ public class SysContainerServiceimpl implements SysContainerService {
         // sysContainer.setContainerId(dockerID.substring(0,12));
         // System.out.println(dockerID);
         sysContainer.setContainerId(containerId);
-        sysContainer.setVersionId(containerAddObject.getVersionid());
+        // sysContainer.setVersionId(containerAddObject.getVersionid());
 
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         sdf.setTimeZone(TimeZone.getTimeZone("GMT+8:00"));

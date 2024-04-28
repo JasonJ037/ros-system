@@ -4,12 +4,13 @@ import lombok.Data;
 
 import java.util.List;
 
+import com.jhh.rossystem.entity.PortMapping;
+
 @Data
 public class ContainerAddObject {
     private String name;
     private Integer userid;
     private Integer imageid;
-    private Integer versionid;
-    private List<Integer> ports;
+    private List<PortMapping> ports;
     private String extraConfig;
 }
